@@ -41,7 +41,12 @@ class App extends React.Component {
                     <Widget update={this.update.bind(this)} />
                     <Widget update={this.update.bind(this)} />
                 </div>
+                <div>
+                    <Button>I <Heart /> React </Button>
+                    <Button>Next React </Button>
+                </div>
             </div>
+
         )
 
         // JSX get compiled by js :
@@ -64,6 +69,21 @@ App.defaultProps = {
 // stateless function Component
 const Widget = (props) =>
     <textarea name="surname" id="" cols="10" rows="1" onChange={props.update}></textarea>
+
+
+class Button extends React.Component {
+    render() {
+        return <button>{this.props.children} library</button>
+    }
+}
+
+//const Button = (props) => <button>{props.children} + test icon</button>
+
+class Heart extends React.Component {
+    render() {
+        return <span>&hearts;</span>
+    }
+}
 
 
 export default App;

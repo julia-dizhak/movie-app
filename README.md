@@ -49,5 +49,12 @@ defaultProps
 State is used for properties on a component that will change, versus static properties that are passed in.
 
 
-## Lesson 6: Use React Components as Children for other Components
+## Lesson 6: use React Components as Children for other Components
 React Component can output other React Component
+
+
+## Lesson 7: access nested data with React props.children
+When you're building your React components, you'll probably want to access child properties of the markup. this.props.children accesses the innerHTML or nested components of another component.
+
+
+## Lesson 8:
