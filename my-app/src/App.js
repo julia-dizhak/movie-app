@@ -1,21 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+// create component by es6 class Component
+class App extends React.Component {
+    //
+    constructor() {
+        super();
+        this.state = {
+            name: "Julia"
+        };
+    }
+
+    setNewName (e) {
+        this.setState(
+            {
+                name: e.target.value
+            }
+        )
+    }
+
+    render() {
+        return <div>
+            <h1 className="test">Hello React world { this.state.name }</h1>
+            <input type="text" onChange={ this.setNewName.bind(this) } />
+        </div>
+
+        // JSX get compiled by js :
+        //return React.createElement('h1', null, 'Hello');
+    }
 }
+
+// stateless function component
+//const App = () => <h1>Hello stateless Julia</h1>
 
 export default App;
