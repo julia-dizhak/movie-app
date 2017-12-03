@@ -57,4 +57,5 @@ React Component can output other React Component
 When you're building your React components, you'll probably want to access child properties of the markup. this.props.children accesses the innerHTML or nested components of another component.
 
 
-## Lesson 8:
+## Lesson 8: add custom propType Validation to React Components
+In addition to the types built into PropTypes we can also define our own custom propType validator

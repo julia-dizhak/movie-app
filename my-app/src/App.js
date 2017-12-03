@@ -45,6 +45,9 @@ class App extends React.Component {
                     <Button>I <Heart /> React </Button>
                     <Button>Next React </Button>
                 </div>
+                <div>
+                    <Title title="there is a title"/>
+                </div>
             </div>
 
         )
@@ -85,5 +88,20 @@ class Heart extends React.Component {
     }
 }
 
+const Title = (props) =>
+    <h2>Title: {props.title}</h2>
+
+Title.propTypes = {
+    //title: PropTypes.string.isRequired
+    // custom propType validation
+    title(props, propName, component) {
+        if (!(propName in props)) {
+            return new Error(`missing ${propName}`);
+        }
+        if (props[propName].length < 10) {
+            return new Error(`${propName} was too short`);
+        }
+    }
+}
 
 export default App;
