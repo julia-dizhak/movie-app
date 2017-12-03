@@ -5,18 +5,25 @@ import PropTypes from 'prop-types';
 class App extends React.Component {
     //
     constructor() {
-        super();
+        super(); //
         this.state = {
-            name: "Julia"
+            name: "Julia",
+            surname: "Dizhak",
+            number: 0
         };
     }
 
-    setNewName (e) {
-        this.setState(
-            {
-                name: e.target.value
-            }
-        )
+    setNewName(event) {
+        this.setState({
+            name: event.target.value
+        })
+    }
+
+    // custom method
+    update(event) {
+        this.setState({
+            surname: event.target.value
+        })
     }
 
     render() {
@@ -24,10 +31,16 @@ class App extends React.Component {
             number = this.props.number;
         return (
             <div>
-                <p>{ text } is { number }</p>
-                <h1 className="test">Hello { this.state.name }</h1>
+                <p>{text} is {number}</p>
+                <h1 className="test">Hello {this.state.name} {this.state.surname}</h1>
                 <b>Put your name in input again </b>
-                <input type="text" onChange={ this.setNewName.bind(this) } />
+                <input type="text" onChange={this.setNewName.bind(this)} />
+                <div>
+                    Pur your surname
+                    <Widget update={this.update.bind(this)} />
+                    <Widget update={this.update.bind(this)} />
+                    <Widget update={this.update.bind(this)} />
+                </div>
             </div>
         )
 
@@ -36,7 +49,7 @@ class App extends React.Component {
     }
 }
 
-// stateless function component
+// stateless function Component
 //const App = () => <h1>Hello stateless Julia</h1>
 
 App.propTypes = {
@@ -47,6 +60,10 @@ App.propTypes = {
 App.defaultProps = {
     text: "this is default text"
 };
+
+// stateless function Component
+const Widget = (props) =>
+    <textarea name="surname" id="" cols="10" rows="1" onChange={props.update}></textarea>
 
 
 export default App;

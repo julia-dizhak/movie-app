@@ -39,5 +39,15 @@ How to structure JSX in a React component.
 
 ## Lesson 4: set properties on React Components
 we can pass data into component by using props
+
 typechecking with propTypes
+
 defaultProps
+
+
+## Lesson 5: manage React Component State with setState
+State is used for properties on a component that will change, versus static properties that are passed in.
+
+
+## Lesson 6: Use React Components as Children for other Components
+React Component can output other React Component
