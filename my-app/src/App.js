@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // create component by es6 class Component
 class App extends React.Component {
-    //
+    // setup constructor
     constructor() {
         super(); //
         this.state = {
@@ -35,7 +35,11 @@ class App extends React.Component {
         return (
             <div>
                 <p>{text} is {number}</p>
+
                 <h1 className="test">Hello {this.state.name} {this.state.surname}</h1>
+                {/*JSX get compiled by js :*/}
+                {/*return React.createElement('h1', null, 'Hello');*/}
+
                 <b>Put your name in input again </b>
                 <input type="text" onChange={this.setNewName.bind(this)} />
                 <div>
@@ -69,17 +73,17 @@ class App extends React.Component {
                         rows="10"/>
                     <h3>{this.state.currentEvent}</h3>
                 </div>
+
+                <hr />
+                <Additional />
             </div>
 
         )
-
-        // JSX get compiled by js :
-        // return React.createElement('h1', null, 'Hello');
     }
 }
 
 // stateless function Component
-//const App = () => <h1>Hello stateless Julia</h1>
+// const App = () => <h1>Hello stateless Julia</h1>
 
 App.propTypes = {
     text: PropTypes.string,
@@ -101,7 +105,7 @@ class Button extends React.Component {
     }
 }
 
-//const Button = (props) => <button>{props.children} + test icon</button>
+// const Button = (props) => <button>{props.children} + test icon</button>
 
 class Heart extends React.Component {
     render() {
@@ -110,10 +114,10 @@ class Heart extends React.Component {
 }
 
 const Title = (props) =>
-    <h2>Title: {props.title}</h2>
+    <h2>Title: {props.title}</h2>;
 
 Title.propTypes = {
-    //title: PropTypes.string.isRequired
+    // title: PropTypes.string.isRequired
     // custom propType validation
     title(props, propName, component) {
         if (!(propName in props)) {
@@ -122,6 +126,39 @@ Title.propTypes = {
         if (props[propName].length < 10) {
             return new Error(`${propName} was too short`);
         }
+    }
+};
+
+class Additional extends React.Component {
+    constructor() {
+        super();
+        this.state = {a: ''}
+    }
+    update(event) {
+        this.setState({
+            //a: event.target.value,
+            a: this.a.value,
+            //b: event.target.value
+            b: this.refs.b.value
+        })
+    }
+    render() {
+        return (
+            <div>
+                <input
+                    // ref="a"
+                    ref={node => this.a = node}
+                    type="text"
+                    onChange={this.update.bind(this)}
+                /> {this.state.a}
+                <hr/>
+                <input
+                    ref="b"
+                    type="text"
+                    onChange={this.update.bind(this)}
+                /> {this.state.b}
+            </div>
+        )
     }
 }
 

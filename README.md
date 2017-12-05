@@ -64,7 +64,12 @@ In addition to the types built into PropTypes we can also define our own custom 
 ## Lesson 9: normalize events with react synthetic event system
 Event handlers are passed an instance of SyntheticEvent in React: take a look at the wide range of events available to us, including Touch events.
 
+
 ## Lesson 10: use React ref to Get a References to specific components
+Refs are a way to reference a node, or an instance of a component in application
+Ref - returns the node that we are referencing
+The ref attribute or prop can also take a callback
+
 
 ## Lesson 11: understand the React Component Lifecycle methods
 
