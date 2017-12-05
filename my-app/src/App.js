@@ -9,8 +9,10 @@ class App extends React.Component {
         this.state = {
             name: "Julia",
             surname: "Dizhak",
-            number: 0
+            number: 0,
+            currentEvent: '---'
         };
+        this.update = this.update.bind(this)
     }
 
     setNewName(event) {
@@ -22,7 +24,8 @@ class App extends React.Component {
     // custom method
     update(event) {
         this.setState({
-            surname: event.target.value
+            surname: event.target.value,
+            currentEvent: event.type
         })
     }
 
@@ -48,6 +51,24 @@ class App extends React.Component {
                 <div>
                     <Title title="there is a title"/>
                 </div>
+                <div>
+                    <textarea
+                        onKeyPress={this.update}
+                        onCopy={this.update}
+                        onPaste={this.update}
+                        onCut={this.update}
+                        onFocus={this.update}
+                        onBlur={this.update}
+                        onDoubleClick={this.update}
+                        onMouseOver={this.update}
+                        onMouseDown={this.update}
+                        onTouchStart={this.update}
+                        onTouchMove={this.update}
+                        onTouchEnd={this.update}
+                        cols="30"
+                        rows="10"/>
+                    <h3>{this.state.currentEvent}</h3>
+                </div>
             </div>
 
         )
@@ -71,7 +92,7 @@ App.defaultProps = {
 
 // stateless function Component
 const Widget = (props) =>
-    <textarea name="surname" id="" cols="10" rows="1" onChange={props.update}></textarea>
+    <textarea cols="10" rows="1" onChange={props.update}></textarea>
 
 
 class Button extends React.Component {

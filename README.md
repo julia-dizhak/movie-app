@@ -59,3 +59,15 @@ When you're building your React components, you'll probably want to access child
 
 ## Lesson 8: add custom propType Validation to React Components
 In addition to the types built into PropTypes we can also define our own custom propType validator
+
+
+## Lesson 9: normalize events with react synthetic event system
+Event handlers are passed an instance of SyntheticEvent in React: take a look at the wide range of events available to us, including Touch events.
+
+## Lesson 10: use React ref to Get a References to specific components
+
+## Lesson 11: understand the React Component Lifecycle methods
+
+## Lesson 12: manage React Component state with Lifecycle methods
+
+## Lesson 13: control
