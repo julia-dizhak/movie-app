@@ -44,6 +44,11 @@ class App extends React.Component {
                 <b>Put your name in input again </b>
                 <input type="text" onChange={this.setNewName.bind(this)} />
                 <div>
+                    <button onClick={this.update.bind(this)}>
+                        control React Component update {this.props.value}
+                    </button>
+                </div>
+                <div>
                     Pur your surname
                     <Widget update={this.update.bind(this)} />
                     <Widget update={this.update.bind(this)} />
@@ -99,7 +104,8 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-    text: "this is default text"
+    text: "this is default text",
+    value: 0
 };
 
 // stateless function Component
