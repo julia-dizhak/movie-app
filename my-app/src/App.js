@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 
 // create component by es6 class Component
 class App extends React.Component {
@@ -76,6 +77,13 @@ class App extends React.Component {
 
                 <hr />
                 <Additional />
+
+                <div>
+                    <p>first component will mount and then render</p>
+                    <p>When we click on this guy a bunch of times, our render continuously gets fired, but our component will mount has only fired once.</p>
+                    <p>The next one we can look at is component did mount. This is going to fire off once our component has actually been mounted to the DOM.</p>
+                    <Lifecircle />
+                </div>
             </div>
 
         )
@@ -129,6 +137,7 @@ Title.propTypes = {
     }
 };
 
+// use ref to Get a References to specific components
 class Additional extends React.Component {
     constructor() {
         super();
@@ -139,7 +148,9 @@ class Additional extends React.Component {
             //a: event.target.value,
             a: this.a.value,
             //b: event.target.value
-            b: this.refs.b.value
+            b: this.refs.b.value,
+            //c: ReactDOM.findDOMNode(this.c).value,
+            c: this.c.refs.input.value
         })
     }
     render() {
@@ -157,9 +168,72 @@ class Additional extends React.Component {
                     type="text"
                     onChange={this.update.bind(this)}
                 /> {this.state.b}
+                <hr/>
+                <Input
+                    ref={component => this.c = component}
+                    update={this.update.bind(this)}
+                /> {this.state.c}
+            </div>
+        )
+    }
+}
+
+class Input extends React.Component {
+    render() {
+        return <div><input ref="input" type="text" onChange={this.props.update} /></div>
+    }
+}
+
+class Lifecircle extends React.Component {
+    constructor() {
+        super(); // to get context
+        this.state = {val: 0};
+        this.update = this.update.bind(this)
+    }
+
+    update() {
+        this.setState({val: this.state.val + 1})
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount');
+        this.setState({m: 2})
+    }
+
+    render(){
+        console.log('render');
+        return <button onClick={this.update}>{this.state.val * this.state.m}</button>
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount');
+        console.log(ReactDOM.findDOMNode(this));
+        this.inc = setInterval(this.update, 500);
+    }
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
+        clearInterval(this.inc)
+    }
+
+}
+
+class Wrapper extends React.Component {
+    mount() {
+        ReactDOM.render(<App />, document.getElementById('app'))
+    }
+    unmount() {
+        ReactDOM.unmountComponentAtNode(document.getElementById('app'))
+    }
+    render() {
+        return (
+            <div>
+                <button onClick={this.mount.bind(this)}>Mount</button>
+                <button onClick={this.unmount.bind(this)}>UnMount</button>
             </div>
         )
     }
 }
 
 export default App;
+//export default Wrapper;

@@ -54,7 +54,8 @@ React Component can output other React Component
 
 
 ## Lesson 7: access nested data with React props.children
-When you're building your React components, you'll probably want to access child properties of the markup. this.props.children accesses the innerHTML or nested components of another component.
+When you're building your React components, you'll probably want to access child properties of the markup.
+this.props.children accesses the innerHTML or nested components of another component.
 
 
 ## Lesson 8: add custom propType Validation to React Components
@@ -67,12 +68,26 @@ Event handlers are passed an instance of SyntheticEvent in React: take a look at
 
 ## Lesson 10: use React ref to Get a References to specific components
 Refs are a way to reference a node, or an instance of a component in application
+
 Ref - returns the node that we are referencing
+
 The ref attribute or prop can also take a callback
+
+ReactDOM
 
 
 ## Lesson 11: understand the React Component Lifecycle methods
+"Mounting" - component is added to the DOM
+"Unmounting" - component is removed from the DOM
+
+componentWillMount () -
+componentDidMount() is going to fire off once our component has actually been mounted to the DOM
+
 
 ## Lesson 12: manage React Component state with Lifecycle methods
+In component willMount, we have access to our state and our props, but we do not have access to the DOM representation of our component,
+because it has not been placed into the DOM yet.
+In component didMount, we have access to our component in the DOM. We could log out, reactDOM.findDOMNode.
+
 
 ## Lesson 13: control
