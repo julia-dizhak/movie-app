@@ -11,7 +11,8 @@ class App extends React.Component {
             name: "Julia",
             surname: "Dizhak",
             number: 0,
-            currentEvent: '---'
+            currentEvent: '---',
+            increasing: false
         };
         this.update = this.update.bind(this)
     }
@@ -27,12 +28,30 @@ class App extends React.Component {
         this.setState({
             surname: event.target.value,
             currentEvent: event.type
-        })
+        });
+
+        ReactDOM.render(
+           <App val={this.props.val+1} number={5} text="your number" />,
+            document.getElementById('root')
+        )
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({increasing: nextProps.val > this.props.val})
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        // the next props not val is a multiple of five, then, we'll go ahead and update it.
+        // two, three, four five, we get our update, one, two, three, four, five, we get our update. Again, the state has actually been changed.
+        return nextProps.val % 5 === 0;
     }
 
     render() {
         let text = this.props.text,
             number = this.props.number;
+
+        console.log(this.state.increasing); // first loading False
+
         return (
             <div>
                 <p>{text} is {number}</p>
@@ -43,11 +62,14 @@ class App extends React.Component {
 
                 <b>Put your name in input again </b>
                 <input type="text" onChange={this.setNewName.bind(this)} />
+
                 <div>
+                    control React Component update
                     <button onClick={this.update.bind(this)}>
-                        control React Component update {this.props.value}
+                        {this.props.val}
                     </button>
                 </div>
+
                 <div>
                     Pur your surname
                     <Widget update={this.update.bind(this)} />
@@ -93,6 +115,10 @@ class App extends React.Component {
 
         )
     }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log(`prevProps: ${prevProps}.val}`)
+    }
 }
 
 // stateless function Component
@@ -105,7 +131,7 @@ App.propTypes = {
 
 App.defaultProps = {
     text: "this is default text",
-    value: 0
+    val: 0
 };
 
 // stateless function Component
@@ -207,7 +233,7 @@ class Lifecircle extends React.Component {
     }
 
     render(){
-        console.log('render');
+        //console.log('render');
         return <button onClick={this.update}>{this.state.val * this.state.m}</button>
     }
 
