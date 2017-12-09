@@ -48,15 +48,29 @@ class App extends React.Component {
     }
 
     componentWillMount() {
-        fetch('https://swapi.co/api/people/?format=json')
-            .then(response => response.json)
+        fetch('https://swapi.co/api/people/?format=json') // ajax call to starwars api
+            .then( response => response.json() )
             .then( ({results: items}) => this.setState({items}) )
+    }
+
+    filter(event) {
+        this.setState({filter: event.target.value})
+
     }
 
     render() {
         let text = this.props.text,
             number = this.props.number,
             items = this.state.items;
+
+        if (this.state.filter) {
+            items = items.filter( item =>
+                item.name.toLowerCase()
+                    .includes(this.state.filter.toLowerCase())
+
+            )
+
+        }
 
         console.log(this.state.increasing); // first loading False
 
@@ -120,9 +134,23 @@ class App extends React.Component {
                     <Lifecircle />
                 </div>
 
-                /*Lesson 14*/
                 <div>
-                    {items.map(item => <h2>{item.name}</h2>)}
+                    <Wrapper />
+                    <br />
+                </div>
+
+                <div>
+                    <div>Lesson 14</div>
+                    <span>Search person from swapi api: </span>
+                    <input type="search" onChange={this.filter.bind(this)} />
+                    {items.map(item =>
+                        //<h2 key={item.name}>{item.name}</h2>)
+                        <Person key={item.name} person={item} />)
+                    }
+                </div>
+
+                <div>
+                    test
                 </div>
 
             </div>
@@ -284,6 +312,8 @@ class Wrapper extends React.Component {
         )
     }
 }
+
+const Person = (props) => <h2>{props.person.name}</h2>;
 
 export default App;
 //export default Wrapper;

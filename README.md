@@ -48,6 +48,10 @@ Questions:
 // console.timeEnd('desc');
 //
 // foreach faster?
+// forloop
+//or map
+// for in
+// performance moduel
 //
 // optimization map
 
