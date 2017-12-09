@@ -137,6 +137,13 @@ In component didMount, we have access to our component in the DOM. We could log 
 
 ### Lesson 13: control React Component updates when new props are received.
 The React component lifecycle will allow you to update your components at runtime.
-componentWillReceiveProps gives us an opportunity to update state by reacting to a prop transition before the render() call is made.
-shouldComponentUpdate allows us to set conditions on when we should update a component so that we are not rendering constantly.
+
+componentWillReceiveProps gives us an opportunity to update state by reaching to a prop transition before the render() call is made.
+
+shouldComponentUpdate allows us to set conditions on when we should update a component, so that we are not rendering constantly.
+
 componentDidUpdate lets us react to a component updating.
+
+
+### Lesson 14: use map to create React component from arrays of data
+

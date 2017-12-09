@@ -12,7 +12,8 @@ class App extends React.Component {
             surname: "Dizhak",
             number: 0,
             currentEvent: '---',
-            increasing: false
+            increasing: false,
+            items: []
         };
         this.update = this.update.bind(this)
     }
@@ -46,9 +47,16 @@ class App extends React.Component {
         return nextProps.val % 5 === 0;
     }
 
+    componentWillMount() {
+        fetch('https://swapi.co/api/people/?format=json')
+            .then(response => response.json)
+            .then( ({results: items}) => this.setState({items}) )
+    }
+
     render() {
         let text = this.props.text,
-            number = this.props.number;
+            number = this.props.number,
+            items = this.state.items;
 
         console.log(this.state.increasing); // first loading False
 
@@ -111,6 +119,12 @@ class App extends React.Component {
                     <p>The next one we can look at is component did mount. This is going to fire off once our component has actually been mounted to the DOM.</p>
                     <Lifecircle />
                 </div>
+
+                /*Lesson 14*/
+                <div>
+                    {items.map(item => <h2>{item.name}</h2>)}
+                </div>
+
             </div>
 
         )
@@ -232,9 +246,13 @@ class Lifecircle extends React.Component {
         this.setState({m: 2})
     }
 
-    render(){
+    render() {
         //console.log('render');
-        return <button onClick={this.update}>{this.state.val * this.state.m}</button>
+        return (
+            <button onClick={this.update}>
+                {/*{this.state.val * this.state.m}*/}
+            </button>
+        )
     }
 
     componentDidMount() {
