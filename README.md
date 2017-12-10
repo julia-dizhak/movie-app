@@ -146,8 +146,36 @@ componentWillReceiveProps gives us an opportunity to update state by reaching to
 
 shouldComponentUpdate allows us to set conditions on when we should update a component, so that we are not rendering constantly.
 
-componentDidUpdate lets us react to a component updating.
+componentDidUpdate lets us React to a Component updating.
 
 
-### Lesson 14: use map to create React component from arrays of data
+### Lesson 14: use map to create React Component from arrays of data
+unique props key
+
+
+### Lesson 15: compose React Component behaviour with higher order components (HOC)
+inheritance
+
+The purpose of a higher order component is to share common functionality or information between multiple components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -139,6 +139,7 @@ class App extends React.Component {
                     <br />
                 </div>
 
+                <hr/>
                 <div>
                     <div>Lesson 14</div>
                     <span>Search person from swapi api: </span>
@@ -149,8 +150,16 @@ class App extends React.Component {
                     }
                 </div>
 
+                <hr/>
                 <div>
-                    test
+                    <div>Lesson 15 High Order Component</div>
+                    <br />
+                    <Button1>button</Button1>
+                    <br />
+                    <br />
+                    <div>
+                         Label<LabelHOC>label</LabelHOC>
+                    </div>
                 </div>
 
             </div>
@@ -314,6 +323,51 @@ class Wrapper extends React.Component {
 }
 
 const Person = (props) => <h2>{props.person.name}</h2>;
+
+// Lesson 15
+const HOC = (InnerComponent) => class extends React.Component {
+    constructor() {
+        super();
+        this.state = {count: 0}
+    }
+    update() {
+        this.setState({count: this.state.count + 1})
+    }
+    // lifecircle method
+    componentWillMount() {
+        console.log('HOC will mount')
+    }
+    render() {
+        return (
+            <InnerComponent
+                // we're going to notice is that our props.children is no longer passing through.
+                // The simplest solution to this is to spread this.props into our components so it will pass that information right on through as props
+                {...this.props}
+                {...this.state} // spread state as a new prop
+                update={this.update.bind(this)}
+            />
+        )
+    }
+};
+
+// state less component and it outputs props.children component
+const Button1 = HOC((props) => <button onClick={props.update}>{props.children} - {props.count}</button>);
+
+// full class component and it also outputs props.children component
+class Label extends React.Component {
+    componentWillMount() {
+        console.log('label will mount');
+    }
+    render() {
+        return (
+            <label onMouseMove={this.props.update}>
+                {this.props.children} - {this.props.count}
+            </label>
+        )
+    }
+}
+
+const LabelHOC = HOC(Label);
 
 export default App;
 //export default Wrapper;
