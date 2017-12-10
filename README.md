@@ -126,7 +126,7 @@ The ref attribute or prop can also take a callback.
 ReactDOM
 
 
-### Lesson 11: understand the React Component lifecycle methods
+### Lesson 11: understand the React Component lifecycle methods.
 "Mounting" - component is added to the DOM
 "Unmounting" - component is removed from the DOM
 
@@ -149,17 +149,17 @@ shouldComponentUpdate allows us to set conditions on when we should update a com
 componentDidUpdate lets us React to a Component updating.
 
 
-### Lesson 14: use map to create React Component from arrays of data
+### Lesson 14: use map to create React Component from arrays of data.
 unique props key
 
 
-### Lesson 15: compose React Component behaviour with higher order components (HOC)
+### Lesson 15: compose React Component behaviour with higher order components (HOC).
 inheritance
 
 The purpose of a higher order component is to share common functionality or information between multiple components
 
 
-
+### Lesson 16: build a JSX Live Compiler as a React Component.
 
 
 

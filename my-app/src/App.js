@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+//import 'App.css';
 
 // create component by es6 class Component
 class App extends React.Component {
@@ -144,15 +145,17 @@ class App extends React.Component {
                     <div>Lesson 14</div>
                     <span>Search person from swapi api: </span>
                     <input type="search" onChange={this.filter.bind(this)} />
-                    {items.map(item =>
-                        //<h2 key={item.name}>{item.name}</h2>)
-                        <Person key={item.name} person={item} />)
-                    }
+                    {/*{items.map(item =>*/}
+                        {/*<h2 key={item.name}>{item.name}</h2>)*/}
+                    {/*}*/}
+                    {/*{items.map(item =>*/}
+                        {/*<Person key={item.name} person={item} />)*/}
+                    {/*}*/}
                 </div>
 
-                <hr/>
+                <hr />
                 <div>
-                    <div>Lesson 15 High Order Component</div>
+                    <div>Lesson 15: High Order Component</div>
                     <br />
                     <Button1>button</Button1>
                     <br />
@@ -160,6 +163,12 @@ class App extends React.Component {
                     <div>
                          Label<LabelHOC>label</LabelHOC>
                     </div>
+                </div>
+
+                <hr />
+                <div>
+                    <div>Lesson 16: </div>
+                    <LiveJsxCompiler />
                 </div>
 
             </div>
@@ -358,6 +367,7 @@ class Label extends React.Component {
     componentWillMount() {
         console.log('label will mount');
     }
+
     render() {
         return (
             <label onMouseMove={this.props.update}>
@@ -369,5 +379,63 @@ class Label extends React.Component {
 
 const LabelHOC = HOC(Label);
 
+// Lesson 16
+class LiveJsxCompiler extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            input: '/* add JSX here */',
+            output: '',
+            error: ''
+        }
+    }
+
+    update(event) {
+        let code = event.target.value;
+
+        try {
+            this.setState({
+                output: window.Babel
+                    .transform(code, { presets: ['es2015', 'react']})
+                    .code,
+                    error: ''
+            })
+        }
+        catch (error) {
+            this.setState({error: error.message})
+        }
+    }
+
+    render() {
+        return (
+            <div className="jsx-compiler">
+                <header>{this.state.error}</header>
+                <div className="container">
+                    <textarea name=""
+                              id=""
+                              cols="30"
+                              rows="10"
+                              onChange={this.update.bind(this)}
+                              defaultValue={this.state.input} />
+                    <pre>
+                        {this.state.output}
+                    </pre>
+                </div>
+            </div>
+        )
+    }
+}
+
+{/*<Buttons>*/}
+
+    {/*<button>a</button>*/}
+    {/*<button>b</button>*/}
+    {/*<button>c</button>*/}
+{/*</Butotns>*/}
+
 export default App;
 //export default Wrapper;
+
+
+
