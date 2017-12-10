@@ -161,7 +161,17 @@ The purpose of a higher order component is to share common functionality or info
 
 ### Lesson 16: build a JSX Live Compiler as a React Component.
 
+### Lesson 17: understand JSX at a deeper level.
+const App = (props) => {
+  return (
+    <div>
+       <span></span>
+       <App />
+    </div>
+  )
+}
 
+###
 
 
 

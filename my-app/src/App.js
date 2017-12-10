@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-//import 'App.css';
+import './App.css';
 
 // create component by es6 class Component
 class App extends React.Component {
@@ -33,7 +33,10 @@ class App extends React.Component {
         });
 
         ReactDOM.render(
-           <App val={this.props.val+1} number={5} text="your number" />,
+           <App
+               val={this.props.val+1}
+               number={5}
+               text="your number" />,
             document.getElementById('root')
         )
     }
@@ -360,7 +363,22 @@ const HOC = (InnerComponent) => class extends React.Component {
 };
 
 // state less component and it outputs props.children component
-const Button1 = HOC((props) => <button onClick={props.update}>{props.children} - {props.count}</button>);
+const Button1 = HOC((props) => {
+    let buttonStyle = {
+        backgroundColor: '#000',
+        color: '#fff',
+        height: 40
+    };
+
+    return (
+        <button
+            style={buttonStyle}
+            onClick={props.update}>
+            {props.children} - {props.count}
+        </button>
+    )
+});
+
 
 // full class component and it also outputs props.children component
 class Label extends React.Component {
