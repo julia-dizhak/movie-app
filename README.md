@@ -1,12 +1,11 @@
 # create-react-app
 Create React apps by egghead courses
 [start learning React](https://egghead.io/courses/start-learning-react) and
-[react testing cookbook](https://egghead.io/courses/react-testing-cookbook)
+[React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
 React current version is 16.02 (on 10.12.17)
 
-## React is
-a js library for building user interfaces.
+## React is a js library for building user interfaces.
 
 ### Benefits:
 Declarative:
@@ -31,7 +30,8 @@ Questions:
 - setState? what does it mean the props is not changed?
 
 
-##[start learning react](https://egghead.io/courses/start-learning-react)
+## [start learning react](https://egghead.io/courses/start-learning-react) (21 lessons)
+
 React is a "javascript library for building user interfaces" from the fine folks at Facebook & Instagram.
 This series will explore the basic fundamentals of React to get you started.
 
@@ -174,5 +174,18 @@ We can utilize React.cloneElement in order to create new components with extende
 To make more composable React components, you can define common APIs for similar component types.
 
 
-### Lesson 21: debug React Components with developer tools in chrome.
+### Lesson 21: debug React Components with developer tools in Chrome.
 React Development Tools is a Chrome plugin that provides handy ways to inspect and debug your React components.
+
+
+## [React testing cookbook](https://egghead.io/courses/react-testing-cookbook) (13 lessons)
+
+The definition of "legacy code" can be described simply as "code that doesn't have tests."
+Code you just wrote, 5 minutes ago? Legacy code. Code that can't be refactored, but only changed.
+How do we prevent the mountain of legacy code that most projects become?
+A solid testing strategy.
+React apps are no different, and can be tested simply if you know some core principles.
+In this course we will take a look at testing React applications. From getting setup and running tests, all the way through testing Redux enabled React applications.
+
+### Lesson 1: React testing: setting up dependencies.
+
