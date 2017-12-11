@@ -1,6 +1,6 @@
 # create-react-app
 Create React apps by egghead course [start learning react](https://egghead.io/courses/start-learning-react)
-React version is 16.02
+React current version is 16.02 on 10.12.17
 
 ## React a js library for building user interfaces.
 
@@ -56,7 +56,7 @@ Questions:
 // optimization map
 
 
-### Lesson 1: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple react app
+### Lesson 1: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
 React requires some initial setup before we can get going with the app.
 ```
 yarn global add create-react-app
@@ -69,7 +69,7 @@ react
 react-dom
 
 
-### Lesson 2: write a react Component
+### Lesson 2: write a react Component.
 Create a React component by ES6 class and by stateless function component (no render, no state)
 
 JSX html like syntax - is a preprocessor step that adds XML syntax to JavaScript.
@@ -83,12 +83,12 @@ Custom components with a capital letter, native HTML DOM element - by lowercase.
 Props are how we pass data around React.
 
 
-### Lesson 3: display output in React with a render method
+### Lesson 3: display output in React with a render method.
 How to structure JSX in a React component.
 ReactDOM.render() method return DOM representation of component.
 
 
-### Lesson 4: set properties on React Components
+### Lesson 4: set properties on React Components.
 We can pass data into component by using props.
 
 typechecking with propTypes
@@ -96,7 +96,7 @@ typechecking with propTypes
 defaultProps
 
 
-### Lesson 5: manage React Component state with setState
+### Lesson 5: manage React Component state with setState.
 State is used for properties on a component that will change, versus static properties that are passed in.
 
 
@@ -162,6 +162,7 @@ The purpose of a higher order component is to share common functionality or info
 ### Lesson 16: build a JSX Live Compiler as a React Component.
 
 ### Lesson 17: understand JSX at a deeper level.
+```
 const App = (props) => {
   return (
     <div>
@@ -170,10 +171,16 @@ const App = (props) => {
     </div>
   )
 }
+```
 
-###
+### Lesson 18: understand React.Children utilities
+The data contained in this.props.children is not always what you might expect.
+React provides React.children to allow for a more consistent development experience.
 
-
+React.Children.map()
+React.Children.toArray()
+React.Children.forEach()
+React.Children.only()
 
 
 

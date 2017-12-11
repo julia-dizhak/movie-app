@@ -169,13 +169,21 @@ class App extends React.Component {
                 </div>
 
                 <hr />
+                {/*<div>*/}
+                    {/*<div>Lesson 16: live js compiler</div>*/}
+                    {/*<LiveJsxCompiler />*/}
+                {/*</div>*/}
+
+                <hr />
                 <div>
-                    <div>Lesson 16: </div>
-                    <LiveJsxCompiler />
+                    <div>Lesson 18: understand React.children utilities</div>
+                    <Parent>
+                        <div className="childA"></div>
+                        {/*<div className="childB"></div>*/}
+                    </Parent>
                 </div>
 
             </div>
-
         )
     }
 
@@ -444,6 +452,22 @@ class LiveJsxCompiler extends React.Component {
         )
     }
 }
+
+// Lesson 18
+class Parent extends React.Component {
+    render() {
+        //console.log(this.props.children);
+        //let items = this.props.children.map(child => child);
+        //let items = React.Children.map(this.props.children, child => child);
+        //let items = React.Children.toArray(this.props.children);
+        //let items = React.Children.forEach(this.props.children, child => console.log(child.props.className));
+        let items = React.Children.only(this.props.children);
+
+        console.log(items);
+        return null;
+    }
+}
+
 
 {/*<Buttons>*/}
 
