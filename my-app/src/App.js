@@ -8,15 +8,20 @@ class App extends React.Component {
     // setup constructor
     constructor() {
         super(); //
+
         this.state = {
             name: "Julia",
             surname: "Dizhak",
             number: 0,
             currentEvent: '---',
             increasing: false,
-            items: []
+            items: [],
+            sliderRed: 0,
+            sliderGreen: 0,
+            sliderBlue: 0
         };
-        this.update = this.update.bind(this)
+
+        this.update = this.update.bind(this);
     }
 
     setNewName(event) {
@@ -29,7 +34,10 @@ class App extends React.Component {
     update(event) {
         this.setState({
             surname: event.target.value,
-            currentEvent: event.type
+            currentEvent: event.type,
+            sliderRed: ReactDOM.findDOMNode(this.refs.sliderRed.refs.inp).value,
+            sliderGreen: ReactDOM.findDOMNode(this.refs.sliderGreen.refs.inp).value,
+            sliderBlue: ReactDOM.findDOMNode(this.refs.sliderBlue.refs.inp).value
         });
 
         ReactDOM.render(
@@ -191,6 +199,47 @@ class App extends React.Component {
                         <button value="B">button B</button>
                         <button value="C">button C</button>
                     </SeveralButtons>
+                </div>
+
+                <hr />
+                <div>
+                    <div>Lesson 20: write more reusable React Components with composable APIs</div>
+                    <div>
+                        <Slider ref="sliderRed" update={this.update} />
+                        {this.state.sliderRed}
+                        <br />
+                        <Slider ref="sliderGreen" update={this.update} />
+                        {this.state.sliderGreen}
+                        <br/>
+                        <Slider ref="sliderBlue" update={this.update} />
+                        {this.state.sliderBlue}
+
+                        <br />
+                        Reusable Component
+                        <br />
+                        <NumInput
+                            ref="sliderRed"
+                            min={0}
+                            max={10}
+                            step={1}
+                            val={+this.state.sliderRed}
+                            type="range"
+                            label="Red"
+                            update={this.update} />
+                        {this.state.sliderRed}
+
+                        <br/>
+                        <NumInput
+                            ref="sliderGreen"
+                            min={0}
+                            max={5}
+                            step={0.1}
+                            val={+this.state.sliderGreen}
+                            type="number"
+                            label="Green"
+                            update={this.update} />
+                        {this.state.sliderGreen}
+                    </div>
                 </div>
 
             </div>
@@ -473,7 +522,7 @@ class Parent extends React.Component {
         //let items = React.Children.forEach(this.props.children, child => console.log(child.props.className));
         let items = React.Children.only(this.props.children);
 
-        console.log(items);
+        //console.log(items);
         return null;
     }
 }
@@ -503,6 +552,60 @@ class SeveralButtons extends React.Component {
         )
     }
 }
+
+// Lesson 20
+class Slider extends React.Component {
+    render() {
+        return (
+            <div>
+                <input
+                    ref="inp"
+                    type="range"
+                    min="0"
+                    max="255"
+                    onChange={this.props.update} />
+            </div>
+        )
+    }
+}
+
+class NumInput extends React.Component {
+    render() {
+        let label = this.props.label !== '' ?
+            <label>{this.props.label} - {this.props.val}</label>: ''
+        return (
+            <div>
+                <input
+                    ref="inp"
+                    type={this.props.type}
+                    min={this.props.min}
+                    max={this.props.max}
+                    step={this.props.val}
+                    onChange={this.props.update} />
+                {label}
+            </div>
+        )
+    }
+}
+
+NumInput.propTypes = {
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    val: PropTypes.number,
+    label: PropTypes.string,
+    update: PropTypes.func.isRequired,
+    type: PropTypes.oneOf(['number', 'range'])
+};
+
+NumInput.defaultProps = {
+    min: 0,
+    max: 10,
+    step: 1,
+    val: 0,
+    label: '',
+    type: 'range'
+};
 
 export default App;
 //export default Wrapper;

@@ -189,7 +189,8 @@ React.Children.only()
 We can utilize React.cloneElement in order to create new components with extended data or functionality.
 
 
-
+### Lesson 20: write more reusable React Components with composable APIs.
+To make more composable React components, you can define common APIs for similar component types.
 
 
 
