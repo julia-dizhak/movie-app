@@ -1,10 +1,14 @@
 # create-react-app
-Create React apps by egghead course [start learning react](https://egghead.io/courses/start-learning-react)
-React current version is 16.02 on 10.12.17
+Create React apps by egghead courses
+[start learning React](https://egghead.io/courses/start-learning-react) and
+[react testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
-## React a js library for building user interfaces.
+React current version is 16.02 (on 10.12.17)
 
-## Benefits:
+## React is
+a js library for building user interfaces.
+
+### Benefits:
 Declarative:
 React makes it painless to create interactive UIs.
 
@@ -23,37 +27,13 @@ Questions:
 - data flow
 
 - state depends how to create component
-- when diff algrithm: jsx is faster? jsx faster then without?
+- when diff algorithm: jsx is faster? jsx faster then without?
 - setState? what does it mean the props is not changed?
 
 
-//Questions with a task
-//
-// const toLoweImper = input => {
-//     "use strict";
-//     const output = [];
-//     for (let i=0; i<input.length; i++) {
-//         output.push(input[i].toLowerCase())
-//
-//     }
-//     return output;
-// }
-//
-// const toLoweCaseDeclarative = input => input.map(
-//     value => value.toLowerCase()
-// );
-//
-// console.time('desc');
-// console.log(toLoweDec ('foo', 'bar', 'baz'));
-// console.timeEnd('desc');
-//
-// foreach faster?
-// forloop
-//or map
-// for in
-// performance moduel
-//
-// optimization map
+##[start learning react](https://egghead.io/courses/start-learning-react)
+React is a "javascript library for building user interfaces" from the fine folks at Facebook & Instagram.
+This series will explore the basic fundamentals of React to get you started.
 
 
 ### Lesson 1: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
@@ -66,6 +46,7 @@ yarn start
 ```
 
 react
+
 react-dom
 
 
@@ -193,10 +174,5 @@ We can utilize React.cloneElement in order to create new components with extende
 To make more composable React components, you can define common APIs for similar component types.
 
 
-
-
-
-
-
-
-
+### Lesson 21: debug React Components with developer tools in chrome.
+React Development Tools is a Chrome plugin that provides handy ways to inspect and debug your React components.
