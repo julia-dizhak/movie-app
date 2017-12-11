@@ -183,6 +183,16 @@ class App extends React.Component {
                     </Parent>
                 </div>
 
+                <hr />
+                <div>
+                    <div>Lesson 19: use React.cloneElement to extend functionality of children components</div>
+                    <SeveralButtons>
+                        <button value="A">button A</button>
+                        <button value="B">button B</button>
+                        <button value="C">button C</button>
+                    </SeveralButtons>
+                </div>
+
             </div>
         )
     }
@@ -468,13 +478,31 @@ class Parent extends React.Component {
     }
 }
 
+// Lesson 19
+class SeveralButtons extends React.Component {
+    constructor() {
+        super();
+        this.state = {selected: 'None'}
+    }
+    selectItem(selected) {
+        this.setState({selected})
+    }
+    render() {
+        let fn = child =>
+            React.cloneElement(child, {
+                onClick: this.selectItem.bind(this, child.props.value)
+            });
 
-{/*<Buttons>*/}
-
-    {/*<button>a</button>*/}
-    {/*<button>b</button>*/}
-    {/*<button>c</button>*/}
-{/*</Butotns>*/}
+        //let items = this.props.children;
+        let items = React.Children.map(this.props.children, fn);
+        return (
+            <div>
+                <header>You have selected: {this.state.selected}</header>
+                {items}
+            </div>
+        )
+    }
+}
 
 export default App;
 //export default Wrapper;

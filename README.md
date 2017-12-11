@@ -161,6 +161,7 @@ The purpose of a higher order component is to share common functionality or info
 
 ### Lesson 16: build a JSX Live Compiler as a React Component.
 
+
 ### Lesson 17: understand JSX at a deeper level.
 ```
 const App = (props) => {
@@ -173,7 +174,8 @@ const App = (props) => {
 }
 ```
 
-### Lesson 18: understand React.Children utilities
+
+### Lesson 18: understand React.Children utilities.
 The data contained in this.props.children is not always what you might expect.
 React provides React.children to allow for a more consistent development experience.
 
@@ -183,7 +185,8 @@ React.Children.forEach()
 React.Children.only()
 
 
-
+### Lesson 19: use React.cloneElement to extend functionality of children components.
+We can utilize React.cloneElement in order to create new components with extended data or functionality.
 
 
 
