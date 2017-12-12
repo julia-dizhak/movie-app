@@ -188,7 +188,7 @@ React apps are no different, and can be tested simply if you know some core prin
 In this course we will take a look at testing React applications. From getting setup and running tests, all the way through testing Redux enabled React applications.
 
 
-### Lesson 1: React testing: setting up dependencies.
+### Lesson 1: setting up dependencies.
 To write tests for our React code, we need to first install some libraries for running tests and writing assertions.
 In this lesson we walk through setting up Mocha as our test runner and Expect as our assertion library.
 We will also set up some React and JSX specific test tools (React Test Utils) to make writing our tests easier.
@@ -199,7 +199,7 @@ yarn add expect --dev
 yarn add react-addons-test-utils --dev
 ```
 
-### Lesson 2: React Testing: running tests
+### Lesson 2: running tests.
 
 ```
 yarn add babel-core --dev
@@ -207,3 +207,6 @@ yarn add babel-preset-es2015 --dev
 yarn add babel-preset-react --dev
 yarn add babel-preset-stage-2 --dev
 
+###
+
+to be continued
