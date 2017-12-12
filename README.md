@@ -198,3 +198,12 @@ yarn add mocha --dev
 yarn add expect --dev
 yarn add react-addons-test-utils --dev
 ```
+
+### Lesson 2: React Testing: running tests
+
+```
+yarn add babel-core --dev
+yarn add babel-preset-es2015 --dev
+yarn add babel-preset-react --dev
+yarn add babel-preset-stage-2 --dev
+
