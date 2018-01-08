@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React ES6</title>
+
+  <style>
+    #lessons-list {
+      margin: auto;
+      width: 980px;
+    }
+    li {
+      padding: 5px;
+    }
+    a:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <ol id="lessons-list"></ol>
+
+  <script>
+      var lessons = [
+          {title: "Write a 'Hello World' React Component", path: "01-intro"},
+          {title: "Display Output in React with a Component's render Method", path: "02-render"}
+      ];
+
+      let lessonsList = document.getElementById('lessons-list');
+
+      lessons.forEach(function(lesson){
+          lessonsList.innerHTML += '<li><a href="/'+ lesson.path +'">'+lesson.title+'</a></li>';
+      });
+  </script>
+
+</body>
+</html>

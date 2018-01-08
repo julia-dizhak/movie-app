@@ -1,39 +1,30 @@
 # create-react-app
-Create React apps by egghead courses
+Start learning React by egghead courses:
 [start learning React](https://egghead.io/courses/start-learning-react) and
 [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
 React current version is 16.02 (on 10.12.17)
 
 ## React is a js library for building user interfaces.
+React is from the fine folks at Facebook & Instagram. It strictly focuses on the "V" in your MVC applications, and touts (advertise) a blazing fast virtual DOM diff implementation.
+
+This repo consist the basic fundamentals of React to get you started.
 
 ### Benefits:
-Declarative:
-React makes it painless to create interactive UIs.
+* Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+Declarative views make your code more predictable and easier to debug.
 
-Component-Based:
+* Component-Based:
 Build encapsulated components that manage their own state, then compose them to make complex UIs.
-Since component logic is written in js instead of
+Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
 
+* Learn Once, Write Anywhere:
+We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
 
-Questions:
-- redux
-- flux
-- declarative and imperative approach
-- component? container?
-- virtual DOM ?
-- diff algorithm: setState, dirty, Re-rendered
-- data flow
-
-- state depends how to create component
-- when diff algorithm: jsx is faster? jsx faster then without?
-- setState? what does it mean the props is not changed?
+React can also render on the server using Node and power mobile apps using React Native.
 
 
 ## [start learning react](https://egghead.io/courses/start-learning-react) (21 lessons)
-
-React is a "javascript library for building user interfaces" from the fine folks at Facebook & Instagram.
-This series will explore the basic fundamentals of React to get you started.
 
 
 ### Lesson 1: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
@@ -45,9 +36,7 @@ cd my-app
 yarn start
 ```
 
-react
-
-react-dom
+open browser to http://localhost:3000
 
 
 ### Lesson 2: write a react Component.
@@ -176,6 +165,22 @@ To make more composable React components, you can define common APIs for similar
 
 ### Lesson 21: debug React Components with developer tools in Chrome.
 React Development Tools is a Chrome plugin that provides handy ways to inspect and debug your React components.
+
+
+## Questions:
+- react
+- react-dom
+- redux
+- flux
+- declarative and imperative approach
+- component? container?
+- virtual DOM ?
+- diff algorithm: setState, dirty, Re-rendered
+- data flow
+
+- state depends how to create component
+- when diff algorithm: jsx is faster? jsx faster then without?
+- setState? what does it mean the props is not changed?
 
 
 ## [React testing cookbook](https://egghead.io/courses/react-testing-cookbook) (13 lessons)
