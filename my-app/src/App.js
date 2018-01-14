@@ -91,8 +91,6 @@ class App extends React.Component {
                 <p>{text} is {number}</p>
 
                 <h1 className="test">Hello {this.state.name} {this.state.surname}</h1>
-                {/*JSX get compiled by js :*/}
-                {/*return React.createElement('h1', null, 'Hello');*/}
 
                 <b>Put your name in input again </b>
                 <input type="text" onChange={this.setNewName.bind(this)} />
@@ -104,12 +102,6 @@ class App extends React.Component {
                     </button>
                 </div>
 
-                <div>
-                    Pur your surname
-                    <Widget update={this.update.bind(this)} />
-                    <Widget update={this.update.bind(this)} />
-                    <Widget update={this.update.bind(this)} />
-                </div>
                 <div>
                     <Button>I <Heart /> React </Button>
                     <Button>Next React </Button>
@@ -263,10 +255,6 @@ App.defaultProps = {
     text: "this is default text",
     val: 0
 };
-
-// stateless function Component
-const Widget = (props) =>
-    <textarea cols="10" rows="1" onChange={props.update}></textarea>
 
 
 class Button extends React.Component {

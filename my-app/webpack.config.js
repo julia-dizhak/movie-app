@@ -1,11 +1,13 @@
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-var lessons = [
-    "01-intro",
-    "02-render",
+const lessons = [
+    "02-component",
+    "03-properties",
+    "04-state",
+    "05-children"
 ];
 
-var entry = {};
+let entry = {};
 
 lessons.forEach(function(lesson) {
     entry[lesson] = './lessons/' + lesson + '/main.js'

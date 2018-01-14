@@ -18,7 +18,7 @@ Declarative views make your code more predictable and easier to debug.
 Build encapsulated components that manage their own state, then compose them to make complex UIs.
 Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
 
-* Learn Once, Write Anywhere:
+* Learn once, write Anywhere:
 We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
 
 React can also render on the server using Node and power mobile apps using React Native.
@@ -27,7 +27,7 @@ React can also render on the server using Node and power mobile apps using React
 ## [start learning react](https://egghead.io/courses/start-learning-react) (21 lessons)
 
 
-### Lesson 1: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
+### Lesson 0: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
 React requires some initial setup before we can get going with the app.
 ```
 yarn global add create-react-app
@@ -39,38 +39,38 @@ yarn start
 open browser to http://localhost:3000
 
 
-### Lesson 2: write a react Component.
-Create a React component by ES6 class and by stateless function component (no render, no state)
+### Lesson 1: write a react Component.
+Create a React component by ES6 class and by `stateless` function component (no render, no state).
 
-JSX html like syntax - is a preprocessor step that adds XML syntax to JavaScript.
+`JSX` html like syntax - is a preprocessor step that adds XML syntax to JavaScript.
 You can definitely use React without JSX but it makes React a lot more elegant.
 Just like XML (extensible markup language), JSX tags have a tag name, attributes, and children. An attribute value is enclosed in quotes, the value is a string.
 
-Attribute ClassName (class reserved in HTML)
+Attribute `ClassName` (class reserved in HTML)
 
 Custom components with a capital letter, native HTML DOM element - by lowercase.
 
 Props are how we pass data around React.
 
 
-### Lesson 3: display output in React with a render method.
+### Lesson 2: display output in React with a render method.
 How to structure JSX in a React component.
 ReactDOM.render() method return DOM representation of component.
 
 
-### Lesson 4: set properties on React Components.
+### Lesson 3: set properties on React Components.
 We can pass data into component by using props.
 
 typechecking with propTypes
 
-defaultProps
+`defaultProps`
 
 
-### Lesson 5: manage React Component state with setState.
+### Lesson 4: manage React Component state with `setState`.
 State is used for properties on a component that will change, versus static properties that are passed in.
 
 
-### Lesson 6: use React Components as children for other Components.
+### Lesson 5: use React Components as children for other Components.
 React Component can output other React Component.
 
 

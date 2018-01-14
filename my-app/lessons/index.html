@@ -18,12 +18,14 @@
   </style>
 </head>
 <body>
-  <ol id="lessons-list"></ol>
+  <ul id="lessons-list"></ul>
 
   <script>
-      var lessons = [
-          {title: "Write a 'Hello World' React Component", path: "01-intro"},
-          {title: "Display Output in React with a Component's render Method", path: "02-render"}
+      let lessons = [
+          {title: "Write a 'Hello World' React Component", path: "02-component"},
+          {title: "Set properties on React Components", path: "03-properties"},
+          {title: "Manage React Component state with setState", path: "04-state"},
+          {title: "use React Components as children for other Components", path: "05-children"}
       ];
 
       let lessonsList = document.getElementById('lessons-list');
