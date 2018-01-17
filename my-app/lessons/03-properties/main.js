@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import App from './App';
+import Person from './App';
 
 ReactDom.render(
-    <App
-        text="this is prop value text"
-        cat={5} />,
-    document.getElementById('app')
+    <Person name="Max" age={28} />,
+    document.querySelector('#app')
 );
+
+// ReactDom.render(
+//     <Person name="Max" age={28} />,
+//     <Person name="Mona" age={28} />,
+//     document.querySelector('#app')
+// );
+
+// it's not working
+// ReactDom.render(
+//     app,
+//     document.querySelector('#app')
+// );

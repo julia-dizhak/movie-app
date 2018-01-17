@@ -4,7 +4,9 @@ const lessons = [
     "02-component",
     "03-properties",
     "04-state",
-    "05-children"
+    "05-children",
+
+    "06-props"
 ];
 
 let entry = {};
