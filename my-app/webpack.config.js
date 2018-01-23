@@ -7,7 +7,8 @@ const lessons = [
     "05-children",
 
     "06-props",
-    "07-state"
+    "07-state",
+    "08-passing-method-references"
 ];
 
 let entry = {};
@@ -37,6 +38,10 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'stage-2',  'react']
                 }
+            },
+            {
+                test: /\.css$/,
+                loaders: ["style-loader","css-loader"]
             }
         ]
     }

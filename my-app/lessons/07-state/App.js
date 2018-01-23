@@ -44,9 +44,14 @@ class List extends React.Component {
                 <h1>React</h1>
                 <p>This is really working ...</p>
 
+                {/*DON'T do this, function will envoke(executed) immediately*/}
+                {/*<button onClick={this.switchNameHandler()}>Switch name</button>*/}
                 <button onClick={this.switchNameHandler}>Switch name</button>
 
-                <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+                <Person
+                    name={this.state.persons[0].name}
+                    age={this.state.persons[0].age}
+                    click=""/>
                 <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My hobbies: racing</Person>
                 <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
             </div>
