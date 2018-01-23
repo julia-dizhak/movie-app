@@ -6,7 +6,8 @@ const lessons = [
     "04-state",
     "05-children",
 
-    "06-props"
+    "06-props",
+    "07-state"
 ];
 
 let entry = {};
@@ -34,7 +35,7 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'stage-2',  'react']
                 }
             }
         ]

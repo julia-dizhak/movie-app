@@ -8,8 +8,6 @@ class App extends React.Component {
             text: 'this is the state text',
             cat: 0
         }
-
-
     }
     update(event) {
         this.setState({text: event.target.value})
