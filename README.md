@@ -83,6 +83,9 @@ React Component can output other React Component.
 ### Lesson 8: passing method references between Components and adding two way binding
 
 
+### Lesson 9: rendering content conditionally
+JSX and conditions
+
 
 ### Lesson 7: access nested data with React props.children.
 When you're building your React Components, you'll probably want to access child properties of the markup. This.props.children accesses the innerHTML or nested components of another component.

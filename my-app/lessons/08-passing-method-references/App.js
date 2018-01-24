@@ -12,15 +12,6 @@ class List extends React.Component {
         otherState: 'some other value'
     };
 
-    switchNameHandler = (newName) => {
-        this.setState({
-            persons: [
-                { name: newName, age: 28 },
-                { name: 'Manu', age: 18 },
-                { name: 'Stephanie', age: 26}
-        ]})
-    };
-
     nameChangedHandler = (event) => {
       this.setState({
           persons: [
@@ -45,21 +36,18 @@ class List extends React.Component {
                 <h1>React</h1>
                 <p>This is really working ...</p>
 
-                <button
-                    style={style}
-                    onClick={() => this.switchNameHandler('Maximilian')}>Switch name</button>
-
                 <Person
                     name={this.state.persons[0].name}
-                    age={this.state.persons[0].age}
-                    click={this.switchNameHandler.bind(this, 'Max!')}/>
+                    age={this.state.persons[0].age} />
                 <Person
                     name={this.state.persons[1].name}
                     age={this.state.persons[1].age}
                     changed={this.nameChangedHandler}>
                     My hobbies: racing
                 </Person>
-                <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+                <Person
+                    name={this.state.persons[2].name}
+                    age={this.state.persons[2].age} />
             </div>
         )
     }

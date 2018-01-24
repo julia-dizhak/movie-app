@@ -8,7 +8,8 @@ const lessons = [
 
     "06-props",
     "07-state",
-    "08-passing-method-references"
+    "08-passing-method-references",
+    "09-conditions"
 ];
 
 let entry = {};
