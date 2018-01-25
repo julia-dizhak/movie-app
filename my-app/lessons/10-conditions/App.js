@@ -13,25 +13,6 @@ class List extends React.Component {
         showPersons: false
     };
 
-    // switchNameHandler = (newName) => {
-    //     this.setState({
-    //         persons: [
-    //             { name: newName, age: 28 },
-    //             { name: 'Manu', age: 18 },
-    //             { name: 'Stephanie', age: 26}
-    //     ]})
-    // };
-
-    nameChangedHandler = (event) => {
-      this.setState({
-          persons: [
-              { name: 'Max', age: 28 },
-              { name: event.target.value, age: 18 },
-              { name: 'Stephanie', age: 26}
-          ]
-      })
-    };
-
     togglePersonsHandler = () => {
         const doesShow = this.state.showPersons;
         this.setState({showPersons: !doesShow})
@@ -51,20 +32,17 @@ class List extends React.Component {
         if (this.state.showPersons) {
             persons = (
                 <div>
-                    {/*<Person*/}
-                        {/*name={this.state.persons[0].name}*/}
-                        {/*age={this.state.persons[0].age}*/}
-                        {/*click={this.switchNameHandler.bind(this, 'Max!')}/>*/}
                     <Person
                         name={this.state.persons[0].name}
                         age={this.state.persons[0].age} />
                     <Person
                         name={this.state.persons[1].name}
-                        age={this.state.persons[1].age}
-                        changed={this.nameChangedHandler}>
+                        age={this.state.persons[1].age}>
                         My hobbies: racing
                     </Person>
-                    <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+                    <Person
+                        name={this.state.persons[2].name}
+                        age={this.state.persons[2].age} />
                 </div>
             )
         }

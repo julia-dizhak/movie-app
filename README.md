@@ -87,6 +87,14 @@ React Component can output other React Component.
 JSX and conditions
 
 
+### Lesson 10: outputting lists
+by .map() method
+
+
+### Docs files:
+
+
+
 ### Lesson 7: access nested data with React props.children.
 When you're building your React Components, you'll probably want to access child properties of the markup. This.props.children accesses the innerHTML or nested components of another component.
 
