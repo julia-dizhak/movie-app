@@ -9,9 +9,10 @@ const lessons = [
     "06-props",
     "07-state",
     "08-passing-method-references",
-    "09-user-input-output",
-    "10-conditions",
-    "11-outputting-lists"
+    "09-conditions",
+    "10-outputting-lists",
+
+    "assignment-1",
 ];
 
 let entry = {};

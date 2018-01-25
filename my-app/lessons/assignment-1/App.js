@@ -9,7 +9,7 @@ class App extends React.Component {
     };
 
     // add a method to manipulate the state (=> an event-handler method)
-    userNameChangedHandler = () => {
+    userNameChangedHandler = (event) => {
         console.log('focus event');
         this.setState({username: event.target.value});
     };
@@ -43,6 +43,7 @@ class App extends React.Component {
                 <UserOutput
                     name="Julia"
                     userName={this.state.username} />
+                <UserOutput userName="Max" />
             </div>
         )
     }
