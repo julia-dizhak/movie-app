@@ -3,7 +3,9 @@ import React from 'react';
 const userInput = (props) => {
     const inputStyle = {
         border: '2px solid #ccc',
-        padding: '5px 10px'
+        backgroundcolor: 'white',
+        font: 'inherit',
+        padding: '8px'
     };
 
     return <input

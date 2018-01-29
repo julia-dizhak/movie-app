@@ -1,9 +1,18 @@
-# create-react-app
-Start learning React by egghead courses:
-[start learning React](https://egghead.io/courses/start-learning-react) and
+# Learning basic and core React, Components.
+
+Lessons divided:
+
+by egghead courses:
+
+[start learning React](https://egghead.io/courses/start-learning-react)
+
 [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
-React current version is 16.02 (on 10.12.17)
+by udemy:
+
+...
+
+React version is 16.02 (on 10.12.17)
 
 ## React is a js library for building user interfaces.
 React is from the fine folks at Facebook & Instagram. It strictly focuses on the "V" in your MVC applications, and touts (advertise) a blazing fast virtual DOM diff implementation.

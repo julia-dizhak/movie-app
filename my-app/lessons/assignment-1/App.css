@@ -1,9 +1,16 @@
 body {
     text-align: center;
+    font: 100% Helvetica,sans-serif;
 }
 .App {
     text-align: left;
 }
 p {
     text-align: left;
+}
+.Assignment-list {
+    font-size: 1em;
+}
+.Assignment-list li {
+    margin: 0 0 10px 0;
 }

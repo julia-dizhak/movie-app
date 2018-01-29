@@ -32,10 +32,12 @@ class List extends React.Component {
         // setState will look on old state and it will simply merge the old state with the new one will override
         this.setState( {
             persons: [
-                { name: 'Maximilian', age: 28 },
+                { name: 'Maximilian', age: Math.random() },
                 { name: 'Manu', age: 18 },
                 { name: 'Stephanie', age: 26}
         ]})
+        // console.log(this.state);
+        // this.state['otherState'] = Math.random();
     };
 
     render() {
@@ -47,7 +49,7 @@ class List extends React.Component {
                 {/*DON'T do this, function will envoke(executed) immediately*/}
                 {/*<button onClick={this.switchNameHandler()}>Switch name</button>*/}
                 <button onClick={this.switchNameHandler}>Switch name</button>
-
+                <div>{this.state.otherState}</div>
                 <Person
                     name={this.state.persons[0].name}
                     age={this.state.persons[0].age}

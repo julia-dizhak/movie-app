@@ -15,7 +15,7 @@ class List extends React.Component {
 
     togglePersonsHandler = () => {
         const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow})
+        this.setState({showPersons: !this.state.showPersons})
     };
 
     render() {
