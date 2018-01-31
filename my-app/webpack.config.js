@@ -13,6 +13,8 @@ const lessons = [
     "10-outputting-lists",
 
     "assignment-1",
+    "create-table",
+    "build-email",
 ];
 
 let entry = {};
