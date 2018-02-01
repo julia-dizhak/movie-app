@@ -8,52 +8,32 @@ import Cell from './Layout/Cell';
 
 class TableDynamic extends React.Component {
     state = {
-        data : [
-            { id:1, key: 'name', label: '((FirstName))' },
-            { id:2, key: 'surname', label: '((LastName))' },
-            { id:3, key: 'image', label: 'photo' }
+        personal : [
+            { key: 'name', label: '((FirstName))' },
+            { key: 'surname', label: '((LastName))' },
+            { key: 'image', label: 'photo' },
+            { key: 'job', label: '((JobTitle))' }
         ],
 
-        // placeholders: {
-        //     name: ((FirstName)),
-        //     surname: ((LastName)),
-        //     image: 'test',
-        //     job: ((JobTitle)),
-        //     phone: ((Phone)),
-        //     mobile: ((Mobile)),
-        //     email: ((Email)),
-        //     street: ((Street)),
-        //     zip: ((ZIP)),
-        //     city: ((City))
-        // },
-        translations: {
-            en: {
-                phone: 'Direct',
-                mobile: 'Company',
+        contacts: [
+            { key: 'phone', label: '((Phone))', en: 'Direct' },
+            { key: 'mobile', label: '((Mobile))', en: 'Company' },
+            { key: 'email', label: '((Email))', en: 'Email' }
+        ],
 
-            },
+        address: [
+            { key: 'company', label: 'MoneyPark AG' },
+            { key: 'street', label: '((Street))' },
+            { key: 'zip', label: '((ZIP))' },
+            { key: 'code', label: '((City))' }
+        ],
 
-            de: {
-                phone: 'Direkt'
-            },
-
-            fr: {
-                phone: 'Ligne directe'
-            },
-
-            it: {
-                phone: 'Tel. Diretto'
-            }
-        }
-    };
-
-    generateHeaders = () => {
-        const cells = this.state.data; // [{key, label}]
-
-        // generate header (th) cell components
-        return  cells.map(function(dataItem) {
-            return <th key={dataItem.key}>{dataItem.id}</th>;
-        });
+        translations: [
+            { key: 'phone',  en: 'Direct',  de: 'Direkt',  fr: 'Ligne directe', it: 'Tel. Diretto' },
+            { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone',     it: 'Ufficio' },
+            { key: 'email',  en: 'Email',   de: 'Email',   fr: 'Email',         it: 'Email' },
+            { key: 'title',  en: 'Recommend MoneyPark',   de: 'MoneyPark weiterempfehlen',   fr: 'test',         it: 'test' }
+        ]
     };
 
 
@@ -71,24 +51,12 @@ class TableDynamic extends React.Component {
             }
         };
 
-        // const cells = this.state.data.map(dataItem => {
-        //     return (
-        //         <td key={dataItem.key}>{dataItem.key}: {dataItem.label}</td>
-        //     )
-        // });
-
         return (
             <div style={style.container}>
-                 <table>
-                     {/*<thead>*/}
-                         {/*<tr>{this.generateHeaders()}</tr>*/}
-                     {/*</thead>*/}
-                     <tbody>
-                         <Row>
-                             <Cell data={this.state.data} />
-                         </Row>
-                     </tbody>
-                 </table>
+                <Table>
+                     <tr><Row data={this.state.contacts} type="cell"></Row></tr>
+                        <Row data={this.state.contacts}></Row>
+                </Table>
             </div>
         )
     }

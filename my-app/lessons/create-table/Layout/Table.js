@@ -2,7 +2,9 @@ import React from 'react';
 
 const table = (props) => {
     return (
-        <p>test</p>
+        <table>
+            <tbody>{props.children}</tbody>
+        </table>
     )
 };
 
