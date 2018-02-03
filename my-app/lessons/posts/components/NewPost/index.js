@@ -6,7 +6,7 @@ import './new-post.css';
 class NewPost extends Component {
     state = {
         title: '',
-        content: '',
+        body: '',
         author: 'Vasyl Dizhak'
     };
 
@@ -36,7 +36,7 @@ class NewPost extends Component {
 
                 <textarea rows="4"
                           value={this.state.body}
-                          onChange={(event) => this.setState({content: event.target.value})} />
+                          onChange={(event) => this.setState({body: event.target.value})} />
                 <label>Author</label>
 
                 <select
