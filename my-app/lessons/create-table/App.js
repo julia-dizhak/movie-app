@@ -5,6 +5,15 @@ import Row from './Layout/Row';
 import Cell from './Layout/Cell';
 
 
+const demo = ({ children, style={}}) => {
+    return (
+        <p style={style}>
+
+        </p>
+    )
+
+};
+
 
 class TableDynamic extends React.Component {
     state = {
@@ -56,7 +65,13 @@ class TableDynamic extends React.Component {
                 <Table>
                      <tr><Row data={this.state.contacts} type="cell"></Row></tr>
                         <Row data={this.state.contacts}></Row>
+
+
                 </Table>
+
+                <demo>
+
+                </demo>
             </div>
         )
     }
