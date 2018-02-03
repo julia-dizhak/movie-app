@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+//import axios from '../../axios';
 
 import Post from '../../components/Post/';
 import './blog.css';
@@ -19,7 +20,7 @@ class Blog extends Component {
         // can't store in const because of async
         //const posts = axios.get('https://jsonplaceholder.typicode.com/posts');
 
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
             .then(response => {
                 // example of transformation
                 const posts = response.data.slice(0,4); // get only first 4 posts
@@ -31,7 +32,7 @@ class Blog extends Component {
                 });
                 //this.setState({posts: response.data});
                 this.setState({posts: updatedPosts});
-                console.log(response);
+                //console.log(response);
             })
             .catch(error => {
                 console.log(error);

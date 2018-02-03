@@ -6,17 +6,17 @@ import './new-post.css';
 class NewPost extends Component {
     state = {
         title: '',
-        body: '',
+        content: '',
         author: 'Vasyl Dizhak'
     };
 
     postDataHandler = () => {
         const data = {
             title: this.state.title,
-            body: this.state.body,
+            body: this.state.content,
             author: this.state.author
         };
-        axios.post('https://jsonplaceholder.typicode.com/posts', data)
+        axios.post('/posts', data)
             .then(response => {
                 console.log(response);
             });
@@ -35,8 +35,8 @@ class NewPost extends Component {
                 <label>Content</label>
 
                 <textarea rows="4"
-                          value={this.state.body}
-                          onChange={(event) => this.setState({body: event.target.value})} />
+                          value={this.state.content}
+                          onChange={(event) => this.setState({content: event.target.value})} />
                 <label>Author</label>
 
                 <select
