@@ -4,12 +4,14 @@ import './post.css';
 
 
 const post = (props) => (
-    <article className="post">
-        <h1>{props.title}</h1>
-        <div className="info">
-            <p className="author">{props.author}</p>
-        </div>
-    </article>
+    <div onClick={props.clicked}>
+        <article className="post">
+            <h1>{props.title}</h1>
+            <div className="info">
+                <p className="author">{props.author}</p>
+            </div>
+        </article>
+    </div>
 );
 
 export default post;
