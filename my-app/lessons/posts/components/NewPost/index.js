@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'react';
 
 import './new-post.css';
 
@@ -7,6 +8,18 @@ class NewPost extends Component {
         title: '',
         content: '',
         author: 'Vasyl Dizhak'
+    };
+
+    postDataHandler = () => {
+        const data = {
+            title: this.state.title,
+            body: this.state.body,
+            author: this.state.author
+        };
+        axios.post('https://jsonplaceholder.typicode.com/posts', data)
+            .then(response => {
+                console.log(response);
+            });
     };
 
     render () {
@@ -22,7 +35,7 @@ class NewPost extends Component {
                 <label>Content</label>
 
                 <textarea rows="4"
-                          value={this.state.content}
+                          value={this.state.body}
                           onChange={(event) => this.setState({content: event.target.value})} />
                 <label>Author</label>
 
@@ -33,7 +46,7 @@ class NewPost extends Component {
                     <option value="Vasyl">Vasyl</option>
                 </select>
 
-                <button>Add Post</button>
+                <button onClick={this.postDataHandler}>Add Post</button>
             </div>
         );
     }
