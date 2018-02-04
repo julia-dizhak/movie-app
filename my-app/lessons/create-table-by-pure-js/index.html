@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create a table by pure js</title>
+</head>
+<body>
+  <div id="table-dynamic"></div>
+  <script src="index.js"></script>
+
+  <script>
+    const translations1 = [
+    { key: 'phone',  en: 'Direct',  de: 'Direkt',  fr: 'Ligne directe', it: 'Tel. Diretto' },
+    { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone',     it: 'Ufficio' },
+    { key: 'email',  en: 'Email',   de: 'Email',   fr: 'Email',         it: 'Email' }
+    ];
+
+const contacts = {
+    phone: {
+        en: 'Direct',
+        de: 'Direkt'
+    },
+    mobile: {
+        en: '1',
+        de: '2'
+    }
+};
+
+let html = ' ';
+
+let lang = ['en', 'de', 'fr', 'it'];
+for (let i=0; i<lang.length; i++) {
+
+    console.log(lang[i]);
+    console.log(contacts.phone[lang[i]])
+
+    html += `
+    <tr> ${contacts.phone[lang[i]]} </tr>
+    <tr> test </tr>`;
+
+}
+
+
+//html += `
+//    <tr> ${contacts.phone.en} </tr>
+//    <tr> test </tr>`;
+//console.log(html);
+
+document.getElementById("table-dynamic").innerHTML = html;
+
+
+  </script>
+</body>
+</html>

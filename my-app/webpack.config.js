@@ -15,6 +15,7 @@ const lessons = [
     "assignment-1",
     "posts",
 
+    "create-table-by-pure-js",
     "create-table",
     "build-email",
 ];
