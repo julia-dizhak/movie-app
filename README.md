@@ -1,6 +1,4 @@
-# Learning basic and core React, Components.
-
-Lessons divided:
+# Learning basic and core React.
 
 by egghead courses:
 
@@ -8,16 +6,10 @@ by egghead courses:
 
 [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
-by udemy:
-
-...
-
-React version is 16.02 (on 10.12.17)
+React 16.02
 
 ## React is a js library for building user interfaces.
-React is from the fine folks at Facebook & Instagram. It strictly focuses on the "V" in your MVC applications, and touts (advertise) a blazing fast virtual DOM diff implementation.
-
-This repo consist the basic fundamentals of React to get you started.
+React is from the fine folks at Facebook & Instagram. 
 
 ### Benefits:
 * Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
