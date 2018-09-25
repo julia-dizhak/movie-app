@@ -1,34 +1,30 @@
-# Learning basic and core React.
-
-by egghead courses:
-
-[start learning React](https://egghead.io/courses/start-learning-react)
-
-[React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
-
 React 16.02
 
-## React is a js library for building user interfaces.
+# Learning basic and core React
+
+by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
+
+## React is a JS library for building user interfaces.
 React is from the fine folks at Facebook & Instagram. 
 
-### Benefits:
-* Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+#### Benefits:
+* Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your app, and React will efficiently update and render just the right components when your data changes.
 Declarative views make your code more predictable and easier to debug.
 
 * Component-Based:
-Build encapsulated components that manage their own state, then compose them to make complex UIs.
+build encapsulated components that manage their own state, then compose them to make complex UIs.
 Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
 
 * Learn once, write anywhere:
 We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
 
-React can also render on the server using Node and power mobile apps using React Native.
+*  React can also render on the server using Node and power mobile apps using React Native.
 
 
 ## [start learning react](https://egghead.io/courses/start-learning-react) (21 lessons)
 
 
-### Lesson 0: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app.
+### Lesson 0: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app
 React requires some initial setup before we can get going with the app.
 ```
 yarn global add create-react-app
@@ -40,7 +36,7 @@ yarn start
 open browser to http://localhost:3000
 
 
-### Lesson 1: write a react Component.
+### Lesson 1: write a React Component
 Create a React component by ES6 class and by `stateless` function component (no render, no state).
 
 `JSX` html like syntax - is a preprocessor step that adds XML syntax to JavaScript.
