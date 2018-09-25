@@ -2,7 +2,7 @@ const port = process.env.PORT || 3000;
 
 const lessons = [
     "01-component",
-    "03-properties",
+    "03-props",
     "04-state",
     "05-children",
 

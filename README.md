@@ -1,6 +1,6 @@
 React 16.02
 
-# Learning basic and core React
+# Learning basic React
 
 by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
@@ -21,9 +21,6 @@ We don’t make assumptions about the rest of your technology stack, so you can 
 *  React can also render on the server using Node and power mobile apps using React Native.
 
 
-## [start learning react](https://egghead.io/courses/start-learning-react) (21 lessons)
-
-
 ### Lesson 0: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app
 React requires some initial setup before we can get going with the app.
 ```
@@ -36,23 +33,19 @@ yarn start
 open browser to http://localhost:3000
 
 
-### Lesson 1: write a React Component
-Create a React component by ES6 class and by `stateless` function component (no render, no state).
+### Lesson 1: display output with a render method
+Create a React component by ES6 class and by `stateless` (no render, no state).
 
-`JSX` html like syntax - is a preprocessor step that adds XML syntax to JavaScript.
+`JSX` html like syntax - is a preprocessor step that adds XML syntax to JS.
 You can definitely use React without JSX but it makes React a lot more elegant.
-Just like XML (extensible markup language), JSX tags have a tag name, attributes, and children. An attribute value is enclosed in quotes, the value is a string.
 
-Attribute `ClassName` (class reserved in HTML)
+Just like XML, JSX tags have a tag name, attributes and children.
 
-Custom components with a capital letter, native HTML DOM element - by lowercase.
+* Attribute `ClassName` (class reserved in HTML)
+* Custom components with a capital letter, native DOM elements - by lowercase.
+* Props are how we pass data around React.
 
-Props are how we pass data around React.
-
-
-### Lesson 2: display output in React with a render method.
-How to structure JSX in a React component.
-ReactDOM.render() method return DOM representation of component.
+ReactDOM.render() method return DOM representation of Component.
 
 
 ### Lesson 3: set properties on React Components.
