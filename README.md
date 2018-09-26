@@ -41,7 +41,7 @@ You can definitely use React without JSX but it makes React a lot more elegant.
 
 Just like XML, JSX tags have a tag name, attributes and children.
 
-* Attribute `ClassName` (class reserved in HTML)
+* Attribute `className` (class reserved in HTML)
 * Custom components with a capital letter, native DOM elements - by lowercase.
 * Props are how we pass data around React.
 
@@ -54,21 +54,12 @@ Pass data into Component by using props. Typechecking with propTypes and `defaul
 
 ### Lesson 4: manage Component's state with `setState`
 
-
-### Lesson 5: use React Components as children for other Components.
-React Component can output other React Component.
-
-
-### Lesson 6
-
-
-### 7 ...
-
+### Lesson 5: use React Components as children for other Components
 
 ### Lesson 8: passing method references between Components and adding two way binding
 
 
-### Lesson 9: rendering content conditionally
+### Lesson 9: rendering content using conditions
 JSX and conditions
 
 

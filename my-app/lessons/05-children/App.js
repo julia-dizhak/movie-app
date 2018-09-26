@@ -1,12 +1,18 @@
 import React from 'react';
 
+function Widget(props) {
+    return (
+        <textarea cols="10" rows="1" onChange={props.update}></textarea>
+    )
+}
+    
 class App extends React.Component {
     constructor() {
         super();
 
         this.state = {
             text: 'this is the state text',
-            cat: 0
+            number: 0
         }
     }
     update(event) {
@@ -14,27 +20,22 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
-                <input
-                    type="text"
-                    onChange={this.update.bind(this)}/>
-                <h1>{this.state.text} - {this.state.cat}</h1>
-            </div>
+            <React.Fragment>
+                <div>
+                    <h1>{this.state.text} - {this.state.number}</h1>
+                    <input
+                        type="text"
+                        onChange={this.update.bind(this)} 
+                    />
+                </div>
+                <React.Fragment>
+                    <Widget update={this.update.bind(this)} />
+                    <Widget update={this.update.bind(this)} />
+                    <Widget update={this.update.bind(this)} />
+                </React.Fragment>    
+            </React.Fragment>    
         )
     }
 }
-
-// stateless function Component
-// const Widget = (props) =>
-//     <textarea cols="10" rows="1" onChange={props.update}></textarea>
-
-
-// const Widget =
-//     <div>
-//                     Put your surname
-//                     <Widget update={this.update.bind(this)} />
-//                     <Widget update={this.update.bind(this)} />
-//                     <Widget update={this.update.bind(this)} />
-//                 </div>
 
 export default App;

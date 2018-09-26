@@ -34,46 +34,27 @@ class List extends React.Component {
                 <div>
                     <Person
                         name={this.state.persons[0].name}
-                        age={this.state.persons[0].age} />
+                        age={this.state.persons[0].age} 
+                    />
                     <Person
                         name={this.state.persons[1].name}
-                        age={this.state.persons[1].age}>
-                        My hobbies: racing
-                    </Person>
+                        age={this.state.persons[1].age} 
+                    />
                     <Person
                         name={this.state.persons[2].name}
-                        age={this.state.persons[2].age} />
+                        age={this.state.persons[2].age} 
+                    />
                 </div>
             )
         }
 
         return (
             <div className="List">
-                <h1>React</h1>
-                <p>This is really working ...</p>
-
                 <button
                     style={style}
+                    type="button"
                     onClick={this.togglePersonsHandler}>Toggle persons</button>
-
-                    {/*conditions */}
-                    {/*{*/}
-                        {/*this.state.showPersons === true ?*/}
-                        {/*<div>*/}
-                             {/*<Person*/}
-                                {/*name={this.state.persons[0].name}*/}
-                                {/*age={this.state.persons[0].age}*/}
-                                {/*click={this.switchNameHandler.bind(this, 'Max!')}/>*/}
-                            {/*<Person*/}
-                                {/*name={this.state.persons[1].name}*/}
-                                {/*age={this.state.persons[1].age}*/}
-                                {/*changed={this.nameChangedHandler}>*/}
-                                {/*My hobbies: racing*/}
-                            {/*</Person>*/}
-                            {/*<Person name={this.state.persons[2].name} age={this.state.persons[2].age} />*/}
-                        {/*</div> : null*/}
-                    {/*}*/}
-                    {persons}
+                    { persons }
             </div>
         )
     }
