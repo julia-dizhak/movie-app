@@ -4,7 +4,6 @@ React 16.02
 
 by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
-## Tagging versions
 ```
 $ git tag -a v1.0 -m "version 1.0"
 $ git tag
@@ -127,6 +126,7 @@ React Development Tools is a Chrome plugin that provides handy ways to inspect a
 * ensure that the new input entered by the user overwrites the old username passed to UserOutput
 * add two-way-binding to your input (in UserInput) to also display the starting username
 * add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets
+
 
 
 ## [React testing cookbook](https://egghead.io/courses/react-testing-cookbook) (13 lessons)
