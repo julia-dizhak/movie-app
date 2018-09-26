@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserOutput.css';
 
-const userOutput = (props) => {
+function UserOutput(props) {
     let message = null;
 
     if (props.name) {
@@ -13,4 +13,4 @@ const userOutput = (props) => {
     return message;
 };
 
-export default userOutput;
+export default UserOutput;

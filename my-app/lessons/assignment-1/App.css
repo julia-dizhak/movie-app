@@ -14,3 +14,10 @@ p {
 .Assignment-list li {
     margin: 0 0 10px 0;
 }
+
+.box {
+    padding: 10px;
+}
+.box span {
+    color: green;
+}

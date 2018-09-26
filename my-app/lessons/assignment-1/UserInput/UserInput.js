@@ -1,6 +1,6 @@
 import React from 'react';
 
-const userInput = (props) => {
+function UserInput(props) {
     const inputStyle = {
         border: '2px solid #ccc',
         backgroundcolor: 'white',
@@ -8,11 +8,14 @@ const userInput = (props) => {
         padding: '8px'
     };
 
-    return <input
-               type="text"
-               style={inputStyle}
-               onChange={props.changed}
-               value={props.currentName} />
+    return (
+        <input
+            type="text"
+            style={inputStyle}
+            onChange={props.changed}
+            value={props.currentName} 
+        />
+    )
 };
 
-export default userInput;
+export default UserInput;

@@ -4,6 +4,15 @@ React 16.02
 
 by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
 
+## Tagging versions
+```
+$ git tag -a v1.0 -m "version 1.0"
+$ git tag
+v1.0
+v1.2
+v1.3
+```
+
 ## React is a JS library for building user interfaces.
 React is from the fine folks at Facebook & Instagram. 
 
@@ -41,9 +50,9 @@ You can definitely use React without JSX but it makes React a lot more elegant.
 
 Just like XML, JSX tags have a tag name, attributes and children.
 
-* Attribute `className` (class reserved in HTML)
-* Custom components with a capital letter, native DOM elements - by lowercase.
-* Props are how we pass data around React.
+* attribute `className` (class reserved in HTML)
+* custom components with a capital letter, native DOM elements - by lowercase.
+* props are how we pass data around React.
 
 ReactDOM.render() method return DOM representation of Component.
 
@@ -56,6 +65,15 @@ Pass data into Component by using props. Typechecking with propTypes and `defaul
 
 ### Lesson 5: use React Components as children for other Components
 
+### Lesson 7: React props.children.
+This.props.children accesses the innerHTML or nested components of another Component. 
+```
+React.Children.map()
+React.Children.toArray()
+React.Children.forEach()
+React.Children.only()
+```
+
 ### Lesson 8: passing method references between Components and adding two way binding
 
 
@@ -66,118 +84,49 @@ JSX and conditions
 ### Lesson 10: outputting lists
 by .map() method
 
-
-### Docs files:
-
-
-
-### Lesson 7: access nested data with React props.children.
-When you're building your React Components, you'll probably want to access child properties of the markup. This.props.children accesses the innerHTML or nested components of another component.
-
-
-### Lesson 8: add custom propType validation to React Components.
-In addition to the types built into PropTypes, we can also define our own custom propType validator.
-
-
-### Lesson 9: normalize events with React synthetic event system.
-Event handlers are passed an instance of SyntheticEvent in React: take a look at the wide range of events available to us, including Touch events.
-
-
-### Lesson 10: use React ref to get a references to specific components.
-Refs are a way to reference a node, or an instance of a component in application.
-
-Ref - returns the node that we are referencing.
-
-The ref attribute or prop can also take a callback.
-
-ReactDOM
-
-
-### Lesson 11: understand the React Component lifecycle methods.
-"Mounting" - component is added to the DOM
-"Unmounting" - component is removed from the DOM
-
-componentWillMount () -
-componentDidMount() is going to fire off once our component has actually been mounted to the DOM
-
-
-### Lesson 12: manage React Component state with Lifecycle methods.
-In component willMount, we have access to our state and our props, but we do not have access to the DOM representation of our component, because it has not been placed into the DOM yet.
-In component didMount, we have access to our component in the DOM. We could log out, reactDOM.findDOMNode.
-
-
-### Lesson 13: control React Component updates when new props are received.
+### Lesson ?: React Component lifecycle methods
 The React component lifecycle will allow you to update your components at runtime.
+```
+Mounting - component is added to the DOM
+Unmounting - component is removed from the DOM
+componentWillMount () 
+componentDidMount() is going to fire off once our component has actually been mounted to the DOM;
+componentWillReceiveProps gives us an opportunity to update state by reaching to a prop transition before the render() call is made;
+shouldComponentUpdate allows us to set conditions on when we should update a component, so that we are not rendering constantly;
+componentDidUpdate() 
+```
 
-componentWillReceiveProps gives us an opportunity to update state by reaching to a prop transition before the render() call is made.
-
-shouldComponentUpdate allows us to set conditions on when we should update a component, so that we are not rendering constantly.
-
-componentDidUpdate lets us React to a Component updating.
-
-
-### Lesson 14: use map to create React Component from arrays of data.
+### Lesson ?: use map to create React Component from arrays of data
 unique props key
 
 
-### Lesson 15: compose React Component behaviour with higher order components (HOC).
-inheritance
+### Lesson ?: (HOC)
+The purpose of a higher order component is to share common functionality or information between multiple components.
 
-The purpose of a higher order component is to share common functionality or information between multiple components
-
-
-### Lesson 16: build a JSX Live Compiler as a React Component.
-
-
-### Lesson 17: understand JSX at a deeper level.
-```
-const App = (props) => {
-  return (
-    <div>
-       <span></span>
-       <App />
-    </div>
-  )
-}
-```
-
-
-### Lesson 18: understand React.Children utilities.
-The data contained in this.props.children is not always what you might expect.
-React provides React.children to allow for a more consistent development experience.
-
-React.Children.map()
-React.Children.toArray()
-React.Children.forEach()
-React.Children.only()
-
-
-### Lesson 19: use React.cloneElement to extend functionality of children components.
-We can utilize React.cloneElement in order to create new components with extended data or functionality.
-
-
-### Lesson 20: write more reusable React Components with composable APIs.
-To make more composable React components, you can define common APIs for similar component types.
-
-
-### Lesson 21: debug React Components with developer tools in Chrome.
+### Lesson ?: debug React Components with developer tools in Chrome.
 React Development Tools is a Chrome plugin that provides handy ways to inspect and debug your React components.
 
 
 ## Questions:
 - react
 - react-dom
-- redux
-- flux
+- redux / flux
 - declarative and imperative approach
 - component? container?
-- virtual DOM ?
-- diff algorithm: setState, dirty, Re-rendered
+- virtual DOM 
 - data flow
 
-- state depends how to create component
-- when diff algorithm: jsx is faster? jsx faster then without?
-- setState? what does it mean the props is not changed?
+### Assignament
+* create 2 components: UserInput and UserOutput
+* UserInput should hold an input element, UserOutput two paragraphs
+* output multiple UserOutput components in the App component (any paragraph texts of your choice)
+* pass a username (of your choice) to UserOutput via props and display it there
+* add state to the App component (=> the username) and pass the username to the UserOutput component
+* add a method to manipulate the state (=> an event-handler method)
+* pass the event-handler method reference to the UserInput component and bind it to the input-change event
+* ensure that the new input entered by the user overwrites the old username passed to UserOutput
+* add two-way-binding to your input (in UserInput) to also display the starting username
+* add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets
 
 
 ## [React testing cookbook](https://egghead.io/courses/react-testing-cookbook) (13 lessons)
@@ -190,7 +139,7 @@ React apps are no different, and can be tested simply if you know some core prin
 In this course we will take a look at testing React applications. From getting setup and running tests, all the way through testing Redux enabled React applications.
 
 
-### Lesson 1: setting up dependencies.
+### Lesson 1: set up dependencies
 To write tests for our React code, we need to first install some libraries for running tests and writing assertions.
 In this lesson we walk through setting up Mocha as our test runner and Expect as our assertion library.
 We will also set up some React and JSX specific test tools (React Test Utils) to make writing our tests easier.
@@ -201,7 +150,7 @@ yarn add expect --dev
 yarn add react-addons-test-utils --dev
 ```
 
-### Lesson 2: running tests.
+### Lesson 2: running tests
 
 ```
 yarn add babel-core --dev
@@ -211,4 +160,4 @@ yarn add babel-preset-stage-2 --dev
 
 ###
 
-to be continued
+to be continued ...

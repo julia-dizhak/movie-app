@@ -8,32 +8,19 @@ import './App.css';
 class App extends React.Component {
     state = {
         userName: 'superjulia'
-        //userNames: ['admin', 'superjulia', 'root', 'guest', 'user']
     };
 
-    // add a method to manipulate the state (=> an event-handler method)
     userNameChangedHandler = (event) => {
         console.log('focus event');
-        //const copyUserNames = [...this.state.userNames];
-
-        // let copyState = {
-        //     ...this.state,
-        //     userNames: copyUserNames
-        // };
-        //
-        // copyUserNames[index] = event.target.value;
-        // this.setState(copyState);
-
         this.setState({userName: event.target.value});
     };
 
     render() {
         return (
             <div className="App">
-                <p>Assignments:</p>
-
+                <p>Assignment:</p>
                 <ol className="Assignment-list">
-                    <li>Create TWO new components: UserInput and UserOutput</li>
+                    <li>Create 2 components: UserInput and UserOutput</li>
                     <li>UserInput should hold an input element, UserOutput two paragraphs</li>
                     <li>Output multiple UserOutput components in the App component (any paragraph texts of your choice)</li>
                     <li>Pass a username (of your choice) to UserOutput via props and display it there</li>
@@ -45,32 +32,30 @@ class App extends React.Component {
                     <li>Add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets</li>
                 </ol>
 
-                <p>Assignment solution:</p>
+                <br />
+                <br />
 
-                <UserInput
-                    changed={this.userNameChangedHandler}
-                    currentName={this.state.userName} />
+                <p>Assignment solution:</p>
 
                 <UserOutput
                     name="Julia"
-                    userName="SuperJulia" />
+                    userName="SuperJulia" 
+                />
+
                 <UserOutput
                     name="Vasyl"
-                    userName={this.state.userName} />
-                <UserOutput userName="Max" />
+                    userName="SuperJulia" 
+                />
 
-                {/*<div className="">*/}
-                    {/*{*/}
-                        {/*this.state.userNames.map((name, index) => {*/}
-                            {/*return (*/}
-                                {/*<div key={index}>*/}
-                                    {/*<UserInput name={name} changed={this.userNameChangedHandler.bind(this,index)} />*/}
-                                    {/*<UserOutput name={name} />*/}
-                                {/*</div>*/}
-                            {/*);*/}
-                        {/*})*/}
-                    {/*}*/}
-                {/*</div>*/}
+               <div className="box">  
+                    <UserOutput />
+
+                    <UserInput
+                        changed={this.userNameChangedHandler}
+                        currentName={this.state.userName} 
+                    />&nbsp;
+                    <span>{this.state.userName}</span>
+                </div>
             </div>
         )
     }
