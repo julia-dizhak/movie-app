@@ -5,9 +5,9 @@ function UserOutput(props) {
     let message = null;
 
     if (props.name) {
-        message = <p className="UserOutput">Welcome {props.name}! to assignment. Your username is {props.userName}</p>
+        message = <p className="user-output">Welcome {props.name}! to assignment. Your username is {props.userName}</p>
     } else {
-        message =<p className="UserOutput">Hi! Please could you tell your name</p>
+        message =<p className="user-output">Hi! Please could you tell your name</p>
     }
 
     return message;

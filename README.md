@@ -1,8 +1,21 @@
-React 16.02
-
 # Learning basic React
 
-by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
+inspired by egghead courses: [start learning React (21 lessons)](https://egghead.io/courses/start-learning-react) and [React testing cookbook](https://egghead.io/courses/react-testing-cookbook)
+
+React 16.02
+
+## Assignament
+* create 2 components: UserInput and UserOutput
+* UserInput should hold an input element, UserOutput two paragraphs
+* output multiple UserOutput components in the App component (any paragraph texts of your choice)
+* pass a username (of your choice) to UserOutput via props and display it there
+* add state to the App component (=> the username) and pass the username to the UserOutput component
+* add a method to manipulate the state (=> an event-handler method)
+* pass the event-handler method reference to the UserInput component and bind it to the input-change event
+* ensure that the new input entered by the user overwrites the old username passed to UserOutput
+* add two-way-binding to your input (in UserInput) to also display the starting username
+* add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets
+
 
 ```
 $ git tag -a v1.0 -m "version 1.0"
@@ -32,8 +45,7 @@ We don’t make assumptions about the rest of your technology stack, so you can 
 ### Lesson 0: use [create-react-repo](https://github.com/facebookincubator/create-react-app) to setup a simple React app
 React requires some initial setup before we can get going with the app.
 ```
-yarn global add create-react-app
-create-react-app my-app
+npx create-react-app my-app
 cd my-app
 yarn start
 ```
@@ -114,19 +126,6 @@ React Development Tools is a Chrome plugin that provides handy ways to inspect a
 - component? container?
 - virtual DOM 
 - data flow
-
-### Assignament
-* create 2 components: UserInput and UserOutput
-* UserInput should hold an input element, UserOutput two paragraphs
-* output multiple UserOutput components in the App component (any paragraph texts of your choice)
-* pass a username (of your choice) to UserOutput via props and display it there
-* add state to the App component (=> the username) and pass the username to the UserOutput component
-* add a method to manipulate the state (=> an event-handler method)
-* pass the event-handler method reference to the UserInput component and bind it to the input-change event
-* ensure that the new input entered by the user overwrites the old username passed to UserOutput
-* add two-way-binding to your input (in UserInput) to also display the starting username
-* add styling of your choice to your components/ elements in the components - both with inline styles and stylesheets
-
 
 
 ## [React testing cookbook](https://egghead.io/courses/react-testing-cookbook) (13 lessons)

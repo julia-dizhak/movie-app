@@ -1,13 +1,13 @@
 import React from 'react';
 
-function UserInput(props) {
-    const inputStyle = {
-        border: '2px solid #ccc',
-        backgroundcolor: 'white',
-        font: 'inherit',
-        padding: '8px'
-    };
+const inputStyle = {
+    border: '2px solid #ccc',
+    backgroundcolor: 'white',
+    font: 'inherit',
+    padding: '8px'
+};
 
+function UserInput(props) {
     return (
         <input
             type="text"

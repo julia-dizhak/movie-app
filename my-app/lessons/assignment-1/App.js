@@ -17,9 +17,9 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App">
-                <p>Assignment:</p>
-                <ol className="Assignment-list">
+            <div className="assignament">
+                <p>Assignment description:</p>
+                <ol className="assignment-list">
                     <li>Create 2 components: UserInput and UserOutput</li>
                     <li>UserInput should hold an input element, UserOutput two paragraphs</li>
                     <li>Output multiple UserOutput components in the App component (any paragraph texts of your choice)</li>
@@ -39,12 +39,12 @@ class App extends React.Component {
 
                 <UserOutput
                     name="Julia"
-                    userName="SuperJulia" 
+                    userName="Super Julia" 
                 />
 
                 <UserOutput
                     name="Vasyl"
-                    userName="SuperJulia" 
+                    userName="Super Julia" 
                 />
 
                <div className="box">  

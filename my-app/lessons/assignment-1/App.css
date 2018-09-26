@@ -2,21 +2,24 @@ body {
     text-align: center;
     font: 100% Helvetica,sans-serif;
 }
-.App {
-    text-align: left;
-}
 p {
     text-align: left;
+    padding: 10px 0;
 }
-.Assignment-list {
+.assignament {
+    width: 980px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+.assignment-list {
     font-size: 1em;
 }
-.Assignment-list li {
+.assignment-list li {
     margin: 0 0 10px 0;
 }
 
 .box {
-    padding: 10px;
+    padding: 10px 0;
 }
 .box span {
     color: green;
