@@ -5,20 +5,23 @@ class App extends React.Component {
         super();
 
         this.state = {
-            text: 'this is the state text',
-            cat: 0
+            question: 'What is you favourite number?',
+            number: 0
         }
     }
+    
     update(event) {
-        this.setState({text: event.target.value})
+        this.setState({number: event.target.value})
     }
+
     render() {
         return (
             <div>
+                <h1>{this.state.question} - {this.state.number}</h1>
                 <input
-                    type="text"
-                    onChange={this.update.bind(this)}/>
-                <h1>{this.state.text} - {this.state.cat}</h1>
+                    type="number"
+                    onChange={this.update.bind(this)} 
+                />
             </div>
         )
     }

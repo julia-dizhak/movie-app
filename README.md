@@ -48,16 +48,11 @@ Just like XML, JSX tags have a tag name, attributes and children.
 ReactDOM.render() method return DOM representation of Component.
 
 
-### Lesson 3: set properties on React Components.
-We can pass data into component by using props.
-
-typechecking with propTypes
-
-`defaultProps`
+### Lesson 3: set properties
+Pass data into Component by using props. Typechecking with propTypes and `defaultProps`.
 
 
-### Lesson 4: manage React Component state with `setState`.
-State is used for properties on a component that will change, versus static properties that are passed in.
+### Lesson 4: manage Component's state with `setState`
 
 
 ### Lesson 5: use React Components as children for other Components.
