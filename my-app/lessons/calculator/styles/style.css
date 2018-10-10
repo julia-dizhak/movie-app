@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    font: 100% Helvetica,sans-serif;
+}
+p {
+    text-align: left;
+    padding: 10px 0;
+}
+.assignament {
+    width: 980px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+.assignment-list {
+    font-size: 1em;
+}
+.assignment-list li {
+    margin: 0 0 10px 0;
+}
+
+.box {
+    padding: 10px 0;
+}
+.box span {
+    color: green;
+}

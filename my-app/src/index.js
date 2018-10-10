@@ -4,5 +4,7 @@ import App from './App';
 //import Wrapper from './App';
 // import Additional from  './Additional';
 
-ReactDOM.render(<App number={5} text="your number" />, document.getElementById('root'));
+ReactDOM.render(<App number={5} text="your number" />, 
+document.getElementById('root1')
+);
 //ReactDOM.render(<Wrapper />, document.getElementById('app'));

@@ -2,15 +2,16 @@ import React from 'react';
 import './UserOutput.css';
 
 function UserOutput(props) {
-    let message = null;
-
-    if (props.name) {
-        message = <p className="user-output">Welcome {props.name}! to assignment. Your username is {props.userName}</p>
-    } else {
-        message =<p className="user-output">Hi! Please could you tell your name</p>
-    }
-
-    return message;
+    return (
+        <div>
+            <p className="user-output">
+                {props.name}! Welcome to assignment. 
+            </p>
+            <p className="user-output">
+                Your username is {props.userName}
+            </p>
+        </div>
+    )
 };
 
 export default UserOutput;

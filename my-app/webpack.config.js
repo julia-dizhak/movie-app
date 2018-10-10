@@ -5,7 +5,6 @@ const lessons = [
     "03-props",
     "04-state",
     "05-children",
-
     "06-props",
     "07-state",
     "08-passing-method-references",
@@ -17,6 +16,8 @@ const lessons = [
     "create-table-by-pure-js",
     "create-table",
     "build-email",
+
+    "calculator"
 ];
 
 let entry = {};
