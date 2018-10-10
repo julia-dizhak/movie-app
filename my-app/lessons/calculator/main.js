@@ -2,7 +2,4 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Calculator from './Calculator';
 
-ReactDom.render(
-    <Calculator />,
-    document.getElementById('app')
-);
+ReactDom.render(<Calculator />, document.getElementById('app'));

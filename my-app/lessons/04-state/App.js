@@ -7,23 +7,22 @@ class App extends React.Component {
         this.state = {
             question: 'What is you favourite number?',
             number: 0
-        }
+        };
     }
-    
+
     update(event) {
-        this.setState({number: event.target.value})
+        this.setState({ number: event.target.value });
     }
 
     render() {
         return (
             <div>
-                <h1>{this.state.question} - {this.state.number}</h1>
-                <input
-                    type="number"
-                    onChange={this.update.bind(this)} 
-                />
+                <h1>
+                    {this.state.question} - {this.state.number}
+                </h1>
+                <input type="number" onChange={this.update.bind(this)} />
             </div>
-        )
+        );
     }
 }
 

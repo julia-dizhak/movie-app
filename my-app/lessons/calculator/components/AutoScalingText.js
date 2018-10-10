@@ -6,7 +6,7 @@ export default class AutoScalingText extends React.Component {
     };
 
     componentDidUpdate() {
-        const {scale} = this.state;
+        const { scale } = this.state;
         const node = this.node;
         const parentNode = node.parentNode;
 
@@ -18,29 +18,19 @@ export default class AutoScalingText extends React.Component {
             return true;
         }
 
-
-       
         console.log(node);
         console.log(actualWidth);
         debugger;
-
     }
-    
 
     render() {
-        const {scale} = this.state;
-        const {children} = this.props;
-        
-       
+        const { scale } = this.state;
+        const { children } = this.props;
 
         return (
-            <div 
-                className="test"
-                style={{transform: `scale(${scale},${scale})`}}
-                ref={node => (this.node = node)}>
+            <div className="test" style={{ transform: `scale(${scale},${scale})` }} ref={node => (this.node = node)}>
                 {children}
-                
             </div>
-        )
+        );
     }
 }

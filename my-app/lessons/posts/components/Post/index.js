@@ -1,10 +1,9 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
 import './post.css';
 
-
-const post = (props) => {
+const post = props => {
     console.log(props);
 
     return (
@@ -17,7 +16,6 @@ const post = (props) => {
             </article>
         </div>
     );
-    
 };
 
 export default withRouter(post);

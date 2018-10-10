@@ -8,7 +8,7 @@ class Person extends React.Component {
                 <h2>{this.props.name}</h2>
                 <p>height is {this.props.tall} cm</p>
             </div>
-        )
+        );
     }
 }
 

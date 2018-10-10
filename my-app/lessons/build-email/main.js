@@ -3,7 +3,4 @@ import ReactDom from 'react-dom';
 
 import EmailSignature from './App';
 
-ReactDom.render(
-    <EmailSignature />,
-    document.getElementById('signature')
-);
+ReactDom.render(<EmailSignature />, document.getElementById('signature'));

@@ -26,8 +26,8 @@ import React from 'react';
  *
  *    <Grid>
  *      <Grid.Row>
-*          <p>I'm in the first cell</p>
-*          <p>I'm in the second cell</p>
+ *          <p>I'm in the first cell</p>
+ *          <p>I'm in the second cell</p>
  *      </Grid.Row>
  *    </Grid>
  *
@@ -35,23 +35,19 @@ import React from 'react';
  *
  *    <Grid>
  *      <Grid.Cell>
-*          <p>I'm in the first cell</p>
-*          <p>I'm in the second cell</p>
+ *          <p>I'm in the first cell</p>
+ *          <p>I'm in the second cell</p>
  *      </Grid.Cell>
  *    </Grid>
  *
  */
 
-const cell = (props) => {
-    return (
-        <td>{props.children}</td>
-    )
+const cell = props => {
+    return <td>{props.children}</td>;
 };
 
 const table = () => {
-    return (
-        <p>test</p>
-    )
+    return <p>test</p>;
 };
 
-export default {table, cell};
+export default { table, cell };

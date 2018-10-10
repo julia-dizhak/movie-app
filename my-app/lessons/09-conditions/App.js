@@ -4,18 +4,14 @@ import './App.css';
 
 class List extends React.Component {
     state = {
-        persons: [
-          { name: 'Max', age: 28 },
-          { name: 'Manu', age: 29 },
-          { name: 'Stephanie', age: 26 }
-        ],
+        persons: [{ name: 'Max', age: 28 }, { name: 'Manu', age: 29 }, { name: 'Stephanie', age: 26 }],
         otherState: 'some other value',
         showPersons: false
     };
 
     togglePersonsHandler = () => {
         const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow})
+        this.setState({ showPersons: !doesShow });
     };
 
     render() {
@@ -32,31 +28,21 @@ class List extends React.Component {
         if (this.state.showPersons) {
             persons = (
                 <div>
-                    <Person
-                        name={this.state.persons[0].name}
-                        age={this.state.persons[0].age} 
-                    />
-                    <Person
-                        name={this.state.persons[1].name}
-                        age={this.state.persons[1].age} 
-                    />
-                    <Person
-                        name={this.state.persons[2].name}
-                        age={this.state.persons[2].age} 
-                    />
+                    <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+                    <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
+                    <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
                 </div>
-            )
+            );
         }
 
         return (
             <div className="List">
-                <button
-                    style={style}
-                    type="button"
-                    onClick={this.togglePersonsHandler}>Toggle persons</button>
-                    { persons }
+                <button style={style} type="button" onClick={this.togglePersonsHandler}>
+                    Toggle persons
+                </button>
+                {persons}
             </div>
-        )
+        );
     }
 }
 

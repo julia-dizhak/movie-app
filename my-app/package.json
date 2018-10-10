@@ -7,6 +7,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "^5.6.1",
+    "prettier": "^1.14.3",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -20,7 +22,8 @@
     "build": "react-scripts build",
     "test1": "react-scripts test --env=jsdom",
     "test": "mocha --require babel-core/register ./src/**/*.spec.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write --single-quote --print-width=120 --parser-flow --tab-width=4 \"lessons/**/*.js\""
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

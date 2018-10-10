@@ -4,7 +4,9 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello <b>React</b></h1>
+                <h1>
+                    Hello <b>React</b>
+                </h1>
                 <b>bold</b>
             </div>
         );

@@ -4,20 +4,13 @@ import Table from './Layout/Table';
 import Row from './Layout/Row';
 import Cell from './Layout/Cell';
 
-
-const demo = ({ children, style={}}) => {
-    return (
-        <p style={style}>
-
-        </p>
-    )
-
+const demo = ({ children, style = {} }) => {
+    return <p style={style} />;
 };
-
 
 class TableDynamic extends React.Component {
     state = {
-        personal : [
+        personal: [
             { key: 'name', label: '((FirstName))' },
             { key: 'surname', label: '((LastName))' },
             { key: 'image', label: 'photo' },
@@ -38,13 +31,12 @@ class TableDynamic extends React.Component {
         ],
 
         translations: [
-            { key: 'phone',  en: 'Direct',  de: 'Direkt',  fr: 'Ligne directe', it: 'Tel. Diretto' },
-            { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone',     it: 'Ufficio' },
-            { key: 'email',  en: 'Email',   de: 'Email',   fr: 'Email',         it: 'Email' },
-            { key: 'title',  en: 'Recommend MoneyPark',   de: 'MoneyPark weiterempfehlen',   fr: 'test',         it: 'test' }
+            { key: 'phone', en: 'Direct', de: 'Direkt', fr: 'Ligne directe', it: 'Tel. Diretto' },
+            { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone', it: 'Ufficio' },
+            { key: 'email', en: 'Email', de: 'Email', fr: 'Email', it: 'Email' },
+            { key: 'title', en: 'Recommend MoneyPark', de: 'MoneyPark weiterempfehlen', fr: 'test', it: 'test' }
         ]
     };
-
 
     render() {
         const style = {
@@ -56,24 +48,22 @@ class TableDynamic extends React.Component {
 
             email: {
                 maxWidth: '640px',
-                width: '100%',
+                width: '100%'
             }
         };
 
         return (
             <div style={style.container}>
                 <Table>
-                     <tr><Row data={this.state.contacts} type="cell"></Row></tr>
-                        <Row data={this.state.contacts}></Row>
-
-
+                    <tr>
+                        <Row data={this.state.contacts} type="cell" />
+                    </tr>
+                    <Row data={this.state.contacts} />
                 </Table>
 
-                <demo>
-
-                </demo>
+                <demo />
             </div>
-        )
+        );
     }
 }
 

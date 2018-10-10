@@ -6,18 +6,12 @@ import Cell from './Layout/Grid';
 
 class EmailSignature extends React.Component {
     state = {
-        cell : [
-            { key: 'name', label: '((FirstName))' },
-            { key: 'lastName', label: 'Last Name' }
-        ],
+        cell: [{ key: 'name', label: '((FirstName))' }, { key: 'lastName', label: 'Last Name' }],
         // cell : [
         //     { key: 'firstName', label: 'First Name' },
         //     { key: 'lastName', label: 'Last Name' }
         // ],
-        data : [
-            { id: 1, firstName: 'John', lastName: 'Doe' },
-            { id: 2, firstName: 'Clark', lastName: 'Kent' }
-        ],
+        data: [{ id: 1, firstName: 'John', lastName: 'Doe' }, { id: 2, firstName: 'Clark', lastName: 'Kent' }],
 
         // placeholders: {
         //     name: ((FirstName)),
@@ -34,8 +28,7 @@ class EmailSignature extends React.Component {
         translations: {
             en: {
                 phone: 'Direct',
-                mobile: 'Company',
-
+                mobile: 'Company'
             },
 
             de: {
@@ -66,7 +59,6 @@ class EmailSignature extends React.Component {
     //     });
     // },
 
-
     render() {
         const style = {
             container: {
@@ -77,37 +69,36 @@ class EmailSignature extends React.Component {
 
             email: {
                 maxWidth: '640px',
-                width: '100%',
+                width: '100%'
             }
         };
 
         const cells = this.state.cell.map(cellItem => {
             return (
-                <td key={cellItem.key}>{cellItem.key}: {cellItem.label}</td>
-            )
+                <td key={cellItem.key}>
+                    {cellItem.key}: {cellItem.label}
+                </td>
+            );
         });
 
         return (
             <div style={style.container}>
                 <table>
                     <tbody>
-                        <tr>
-                            {cells}
-                        </tr>
+                        <tr>{cells}</tr>
                     </tbody>
                 </table>
-
 
                 {/*this.generateHeaders*/}
                 {/*<Grid style={style.email}>*/}
 
-                    {/*/!*<Grid.Cell style={style.content}>*!/*/}
-                        {/*/!*{children}*!/*/}
-                    {/*/!*</Grid.Cell>*!/*/}
+                {/*/!*<Grid.Cell style={style.content}>*!/*/}
+                {/*/!*{children}*!/*/}
+                {/*/!*</Grid.Cell>*!/*/}
 
                 {/*</Grid>*/}
             </div>
-        )
+        );
     }
 }
 

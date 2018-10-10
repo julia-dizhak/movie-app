@@ -3,12 +3,11 @@ import React from 'react';
 import Table from './Layout/Table';
 import Row from './Layout/Row';
 
-
 const translations1 = [
-    { key: 'phone',  en: 'Direct',  de: 'Direkt',  fr: 'Ligne directe', it: 'Tel. Diretto' },
-    { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone',     it: 'Ufficio' },
-    { key: 'email',  en: 'Email',   de: 'Email',   fr: 'Email',         it: 'Email' }
-    ];
+    { key: 'phone', en: 'Direct', de: 'Direkt', fr: 'Ligne directe', it: 'Tel. Diretto' },
+    { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone', it: 'Ufficio' },
+    { key: 'email', en: 'Email', de: 'Email', fr: 'Email', it: 'Email' }
+];
 
 const contacts = {
     phone: {
@@ -23,8 +22,6 @@ const contacts = {
     //     { key: 'phone',  de: 'Direkt'},
     //     { key: 'mobile', de: 'Telefon'}
     // ]
-
-
 };
 
 // const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -57,7 +54,7 @@ html += `
 
 class TableDynamic extends React.Component {
     state = {
-        personal : [
+        personal: [
             { key: 'name', label: '((FirstName))' },
             { key: 'surname', label: '((LastName))' },
             { key: 'image', label: 'photo' },
@@ -78,13 +75,12 @@ class TableDynamic extends React.Component {
         ],
 
         translations: [
-            { key: 'phone',  en: 'Direct',  de: 'Direkt',  fr: 'Ligne directe', it: 'Tel. Diretto' },
-            { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone',     it: 'Ufficio' },
-            { key: 'email',  en: 'Email',   de: 'Email',   fr: 'Email',         it: 'Email' },
-            { key: 'title',  en: 'Recommend MoneyPark',   de: 'MoneyPark weiterempfehlen',   fr: 'test',         it: 'test' }
+            { key: 'phone', en: 'Direct', de: 'Direkt', fr: 'Ligne directe', it: 'Tel. Diretto' },
+            { key: 'mobile', en: 'Company', de: 'Telefon', fr: 'Téléphone', it: 'Ufficio' },
+            { key: 'email', en: 'Email', de: 'Email', fr: 'Email', it: 'Email' },
+            { key: 'title', en: 'Recommend MoneyPark', de: 'MoneyPark weiterempfehlen', fr: 'test', it: 'test' }
         ]
     };
-
 
     render() {
         const style = {
@@ -96,22 +92,20 @@ class TableDynamic extends React.Component {
 
             email: {
                 maxWidth: '640px',
-                width: '100%',
+                width: '100%'
             }
         };
 
         return (
             <div style={style.container}>
                 <Table>
-                     <tr><Row data={this.state.contacts} type="cell"></Row></tr>
-                        <Row data={this.state.contacts}></Row>
-
-
+                    <tr>
+                        <Row data={this.state.contacts} type="cell" />
+                    </tr>
+                    <Row data={this.state.contacts} />
                 </Table>
-
-
             </div>
-        )
+        );
     }
 }
 

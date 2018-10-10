@@ -10,23 +10,19 @@ import React from 'react';
 //     { id: 2, firstName: 'Clark', lastName: 'Kent' }
 // ];
 
-const cell = (props) => {
-    return (
-        <td>{props.children}</td>
-    )
+const cell = props => {
+    return <td>{props.children}</td>;
 };
 
 const grid = () => {
     return (
-        <div>
-            test
-        </div>
+        <div>test</div>
         // <table>
         //     <tr>
         //         <td>test</td>
         //     </tr>
         // </table>
-    )
+    );
 };
 
-export default {grid, cell};
+export default { grid, cell };

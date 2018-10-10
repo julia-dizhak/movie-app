@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const emailRender = (props) => {
+const emailRender = props => {
     return <p>test</p>;
 };
 

@@ -4,22 +4,14 @@ import './App.css';
 
 class List extends React.Component {
     state = {
-        persons: [
-          { name: 'Max', age: 28 },
-          { name: 'Manu', age: 29 },
-          { name: 'Stephanie', age: 26 }
-        ],
+        persons: [{ name: 'Max', age: 28 }, { name: 'Manu', age: 29 }, { name: 'Stephanie', age: 26 }],
         otherState: 'some other value'
     };
 
-    nameChangedHandler = (event) => {
-      this.setState({
-          persons: [
-              { name: 'Max', age: 28 },
-              { name: event.target.value, age: 18 },
-              { name: 'Stephanie', age: 26}
-          ]
-      })
+    nameChangedHandler = event => {
+        this.setState({
+            persons: [{ name: 'Max', age: 28 }, { name: event.target.value, age: 18 }, { name: 'Stephanie', age: 26 }]
+        });
     };
 
     render() {
@@ -33,21 +25,15 @@ class List extends React.Component {
 
         return (
             <div className="List">
-                <Person
-                    name={this.state.persons[0].name}
-                    age={this.state.persons[0].age} 
-                />
+                <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
                 <Person
                     name={this.state.persons[1].name}
                     age={this.state.persons[1].age}
-                    changed={this.nameChangedHandler} 
+                    changed={this.nameChangedHandler}
                 />
-                <Person
-                    name={this.state.persons[2].name}
-                    age={this.state.persons[2].age} 
-                />
+                <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
             </div>
-        )
+        );
     }
 }
 

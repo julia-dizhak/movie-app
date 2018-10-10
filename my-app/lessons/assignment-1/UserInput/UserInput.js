@@ -8,14 +8,7 @@ const inputStyle = {
 };
 
 function UserInput(props) {
-    return (
-        <input
-            type="text"
-            style={inputStyle}
-            onChange={props.changed}
-            value={props.currentName} 
-        />
-    )
-};
+    return <input type="text" style={inputStyle} onChange={props.changed} value={props.currentName} />;
+}
 
 export default UserInput;
