@@ -17,7 +17,8 @@ const lessons = [
     "create-table",
     "build-email",
 
-    "calculator"
+    "calculator",
+    "video-app"
 ];
 
 let entry = {};

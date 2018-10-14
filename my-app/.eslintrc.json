@@ -4,8 +4,11 @@
         "prettier",
         "prettier/react"
     ],
-    "rules": {},
+    "rules": {
+        
+    },
     "plugins": [
+        "react",
         "prettier"
     ],
     "parserOptions": {
