@@ -5,7 +5,7 @@
         "prettier/react"
     ],
     "rules": {
-        
+        "react/jsx-filename-extension": [0] 
     },
     "plugins": [
         "react",

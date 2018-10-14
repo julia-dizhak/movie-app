@@ -1,7 +1,7 @@
 import React from 'react';
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './components/Landing';
-import Search from './components/Search';
+import ShowCardList from './components/ShowCardList';
 
 import './styles/style.css';
 
@@ -9,7 +9,7 @@ export default function App() {
     return (
         <div className="app">
             <Landing />
-            <Search />
+            <ShowCardList />
         </div>
     );
 }
