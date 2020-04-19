@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 
 export default function MovieTabs(props) {
   const { sortBy, updatedSortBy } = props;
